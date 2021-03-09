@@ -6,80 +6,79 @@
         xmlns:local="clr-namespace:Pc_PartPicker"
         mc:Ignorable="d"
         Icon="assets/ppp-logo.png"
-        Title="Komponentenauswahl" Height="500" Width="800" WindowStartupLocation="CenterScreen">
+        Title="ComponentView" Height="500" Width="800" WindowStartupLocation="CenterScreen" Background="#FF201E2D">
     <Grid Background="#FF201E2D" Height="500" Width="800" >
-
-
-        <Button Grid.Column="0" x:Name="btn_case"  Width="96" Height="83" Margin="66,45,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Background="#FFEB2A53" Click="btn_case_Click">
+        <Image x:Name="img_ppp" Height="100" Width="130"  HorizontalAlignment="Center" Source="assets/ppp-logo.png" Margin="335,16,335,384"/>
+        <Button Grid.Column="0" x:Name="btn_case"  Width="96" Height="83" Margin="114,132,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Background="#FFEB2A53" Click="btn_case_Click">
             <StackPanel>
                 <Image x:Name="case" Source="assets/Gehäuse.png" Height="57" HorizontalAlignment="Left" Width="60" VerticalAlignment="Top" />
                 <TextBlock Text="Case" FontSize="17" Height="25" Width="43"/>
             </StackPanel>
         </Button>
 
-        <Button x:Name="btn_CPU" HorizontalAlignment="Left" Height="83" Margin="186,45,0,0" VerticalAlignment="Top" Width="96" Background="#FFEB2A53" Click="btn_CPU_Click">
+        <Button x:Name="btn_CPU" HorizontalAlignment="Left" Height="83" Margin="234,132,0,0" VerticalAlignment="Top" Width="96" Background="#FFEB2A53" Click="btn_CPU_Click">
             <StackPanel>
                 <Image x:Name="CPU" Source="assets/CPU.png" Height="55" HorizontalAlignment="Left" Width="58" VerticalAlignment="Top" />
                 <TextBlock Text="CPU" FontSize="17" Height="25" Width="43"/>
             </StackPanel>
         </Button>
 
-        <Button x:Name="btn_RAM" HorizontalAlignment="Left" Height="83" Margin="306,45,0,0" VerticalAlignment="Top" Width="96" Background="#FFEB2A53" Click="btn_RAM_Click">
+        <Button x:Name="btn_RAM" HorizontalAlignment="Left" Height="83" Margin="354,132,0,0" VerticalAlignment="Top" Width="96" Background="#FFEB2A53" Click="btn_RAM_Click">
             <StackPanel Width="57" Height="69">
                 <Image x:Name="RAM" Source="assets/Arbeitsspeicher.png" Height="50" HorizontalAlignment="Left" Width="69" VerticalAlignment="Top" Margin="0,0,-12,0" />
                 <TextBlock Text="RAM" FontSize="17" Height="32" Margin="8,0,-5,0"/>
             </StackPanel>
 
         </Button>
-        <Button x:Name="btn_GPU" HorizontalAlignment="Left" Height="83" Margin="425,45,0,0" VerticalAlignment="Top" Width="96" Background="#FFEB2A53" Click="btn_GPU_Click">
+        <Button x:Name="btn_GPU" HorizontalAlignment="Left" Height="83" Margin="473,132,0,0" VerticalAlignment="Top" Width="96" Background="#FFEB2A53" Click="btn_GPU_Click">
             <StackPanel>
                 <Image x:Name="GPU" Source="assets/Grafikkarte.png" Height="58" HorizontalAlignment="Left" Width="56" VerticalAlignment="Top" />
                 <TextBlock Text="GPU" FontSize="17" Height="32" Margin="8,0,-5,0"/>
             </StackPanel>
         </Button>
 
-        <Button x:Name="btn_Mainboard"  HorizontalAlignment="Left" Height="83" Margin="540,47,0,0" VerticalAlignment="Top" Width="96" Background="#FFEB2A53" Click="btn_Mainboard_Click">
+        <Button x:Name="btn_Mainboard"  HorizontalAlignment="Left" Height="83" Margin="588,134,0,0" VerticalAlignment="Top" Width="96" Background="#FFEB2A53" Click="btn_Mainboard_Click">
             <StackPanel>
-                <Image x:Name="Mainboard" Source="assets/Mainboard.png" Height="54" HorizontalAlignment="Center" Width="78" VerticalAlignment="Top" />
-                <TextBlock Text="Mainboard" FontSize="17" Height="32" Margin="8,0,-5,0" Width="103"/>
+                <Image x:Name="Mainboard" Source="assets/Mainboard.png" Height="54" HorizontalAlignment="Center" Width="78" VerticalAlignment="Top" Margin="-2,0,0,0" />
+                <TextBlock Text="Mainboard" FontSize="17" Height="32" Margin="5,0,-5,0" Width="103"/>
             </StackPanel>
 
         </Button>
 
 
-        <Button x:Name="btn_SSD" HorizontalAlignment="Left" Height="83" Margin="186,158,0,0" VerticalAlignment="Top" Width="96" Background="#FFEB2A53" Click="btn_SSD_Click" >
+        <Button x:Name="btn_SSD" HorizontalAlignment="Left" Height="83" Margin="234,245,0,0" VerticalAlignment="Top" Width="96" Background="#FFEB2A53" Click="btn_SSD_Click" >
             <StackPanel>
                 <Image x:Name="SSD" Source="assets/SSD.png" Height="56" HorizontalAlignment="Left" Width="50" VerticalAlignment="Top" />
-                <TextBlock Text="SSD" FontSize="17" Height="32" Margin="8,0,-5,0"/>
+                <TextBlock Text="SSD" FontSize="17" Height="32" Margin="8,0,-5,0" Width="42"/>
             </StackPanel>
 
         </Button>
 
-        <Button x:Name="btn_HDD"  HorizontalAlignment="Left" Height="83" Margin="66,158,0,0" VerticalAlignment="Top" Width="96" Background="#FFEB2A53" Click="btn_HDD_Click">
+        <Button x:Name="btn_HDD"  HorizontalAlignment="Left" Height="83" Margin="114,245,0,0" VerticalAlignment="Top" Width="96" Background="#FFEB2A53" Click="btn_HDD_Click">
             <StackPanel>
                 <Image x:Name="HDD" Source="assets/Festplatte.png" Height="55" HorizontalAlignment="Left" Width="49" VerticalAlignment="Top" />
                 <TextBlock Text="HDD" FontSize="17" Height="32" Margin="8,0,-5,0"/>
             </StackPanel>
         </Button>
 
-        <Button x:Name="btn_casecooler" HorizontalAlignment="Left" Height="83" Margin="540,158,0,0" VerticalAlignment="Top" Width="96" Background="#FFEB2A53" Click="btn_casecooler_Click">
+        <Button x:Name="btn_casecooler" HorizontalAlignment="Left" Height="83" Margin="588,245,0,0" VerticalAlignment="Top" Width="96" Background="#FFEB2A53" Click="btn_casecooler_Click">
             <StackPanel>
-                <Image x:Name="casecooler" Source="assets/Gehäuse-Lüfter.png" Height="54" HorizontalAlignment="Left" Width="59" VerticalAlignment="Top" />
-                <TextBlock Text="case fan" FontSize="17" Height="32" Margin="8,0,-5,0" Width="65"/>
+                <Image x:Name="casecooler" Source="assets/Gehäuse-Lüfter.png" Height="54" Width="59" HorizontalAlignment="Center"/>
+                <TextBlock Text="case fan" FontSize="17" Height="32" Margin="8,0,-5,0" Width="67"/>
             </StackPanel>
         </Button>
 
-        <Button x:Name="btn_CPU_Cooler"  HorizontalAlignment="Left" Height="83" Margin="425,158,0,0" VerticalAlignment="Top" Width="96" Background="#FFEB2A53" Click="btn_CPU_Cooler_Click">
+        <Button x:Name="btn_CPU_Cooler"  HorizontalAlignment="Left" Height="83" Margin="473,245,0,0" VerticalAlignment="Top" Width="96" Background="#FFEB2A53" Click="btn_CPU_Cooler_Click">
             <StackPanel>
-                <Image x:Name="CPU_cooler" Source="assets/CPU-Kühler.png" Height="51" HorizontalAlignment="Center" Width="66" VerticalAlignment="Top" />
-                <TextBlock Text="GPU cooler" FontSize="17" Height="32" Margin="8,0,-5,0"  VerticalAlignment="Top" Width="113"/>
+                <Image x:Name="CPU_cooler" Source="assets/CPU-Kühler.png" Height="55" HorizontalAlignment="Center" Width="60" VerticalAlignment="Top" />
+                <TextBlock Text="GPU cooler" FontSize="17" Height="32" Margin="0,0,-5,0"   Width="90" RenderTransformOrigin="0.185,0.402" HorizontalAlignment="Right"/>
             </StackPanel>
         </Button>
 
-        <Button x:Name="btn_PSU"  HorizontalAlignment="Left" Height="83" Margin="306,158,0,0" VerticalAlignment="Top" Width="96" Background="#FFEB2A53" Click="btn_PSU_Click">
+        <Button x:Name="btn_PSU"  HorizontalAlignment="Left" Height="83" Margin="354,245,0,0" VerticalAlignment="Top" Width="96" Background="#FFEB2A53" Click="btn_PSU_Click">
             <StackPanel>
                 <Image x:Name="PSU" Source="assets/Netzteil.png" Height="55" HorizontalAlignment="Left" Width="60" VerticalAlignment="Top" />
-                <TextBlock Text="PSU" FontSize="17" Height="32" Margin="8,0,-5,0"/>
+                <TextBlock Text="PSU" FontSize="17" Height="32" Margin="8,0,-5,0" Width="50"/>
             </StackPanel>
         </Button>
 
@@ -87,7 +86,7 @@
         <Button x:Name="btn_exit" Margin="0,382,400,41" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btn_exit_Click">
             <StackPanel>
                 <Image Source="assets/Exit.png" Height="35" Width="36" />
-                <TextBlock Text="Exit" FontSize="30" Height="35"/>
+                <TextBlock FontSize="30" Height="35"><Run Text="Main"/><Run Text=" "/><Run Text="Menu"/></TextBlock>
             </StackPanel>
         </Button>
         <Button Margin="400,382,10,41" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White">
