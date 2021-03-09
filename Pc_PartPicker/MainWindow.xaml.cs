@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Data.SQLite;
 
 namespace Pc_PartPicker
 { 
@@ -16,6 +17,9 @@ namespace Pc_PartPicker
         public MainWindow()
         {
             InitializeComponent();
+            SQLiteConnection sqlite_conn;
+            sqlite_conn = Database.CreateConnection();
+            Database.CreateTable(sqlite_conn);
         }
     }
 }
