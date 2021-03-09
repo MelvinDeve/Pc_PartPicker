@@ -126,5 +126,14 @@
   <ItemGroup>
     <Resource Include="assets\Gehäuse-Lüfter.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\ppp-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Tools.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

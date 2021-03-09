@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pc_PartPicker"
         mc:Ignorable="d"
-        Title="Komponentenauswahl" Height="450" Width="800">
+        Icon="assets/ppp-logo.png"
+        Title="Komponentenauswahl" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid Background="#FF201E2D" >
         <Button Grid.Column="0" x:Name="btn_case"  Width="96" Height="83" Margin="66,45,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Background="#FFEB2A53" Click="btn_case_Click">
             <Image x:Name="case" Source="assets/Gehäuse.png" Height="87" HorizontalAlignment="Left" Width="62" VerticalAlignment="Top" />
