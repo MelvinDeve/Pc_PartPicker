@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Pc_PartPicker
 {
     /// <summary>
-    /// Interaction logic for CPUcooler.xaml
+    /// Interaction logic for Build.xaml
     /// </summary>
-    public partial class CPUcooler : Window
+    public partial class Build : Window
     {
-        public CPUcooler()
+        public Build()
         {
             InitializeComponent();
         }

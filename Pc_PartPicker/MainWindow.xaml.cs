@@ -30,5 +30,12 @@ namespace Pc_PartPicker
             Komponentenauswahl komponenten = new Komponentenauswahl();
             komponenten.ShowDialog();
         }
+
+        private void btn_exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+       
     }
 }
