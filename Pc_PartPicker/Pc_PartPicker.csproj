@@ -55,55 +55,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="casecooler.xaml.cs">
-      <DependentUpon>casecooler.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CPUcooler.xaml.cs">
-      <DependentUpon>CPUcooler.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="GPU.xaml.cs">
-      <DependentUpon>GPU.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="HDD.xaml.cs">
-      <DependentUpon>HDD.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Mainboard.xaml.cs">
-      <DependentUpon>Mainboard.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PSU.xaml.cs">
-      <DependentUpon>PSU.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="RAM.xaml.cs">
-      <DependentUpon>RAM.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="SSD.xaml.cs">
-      <DependentUpon>SSD.xaml</DependentUpon>
-    </Compile>
-    <Page Include="casecooler.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="CPU.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="CPUcooler.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="GPU.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="HDD.xaml">
+    <Page Include="Build.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Komponentenauswahl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Mainboard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -115,10 +71,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Class1.cs" />
-    <Compile Include="CPU.xaml.cs">
-      <DependentUpon>CPU.xaml</DependentUpon>
+    <Compile Include="Build.xaml.cs">
+      <DependentUpon>Build.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Class1.cs" />
     <Compile Include="Komponentenauswahl.xaml.cs">
       <DependentUpon>Komponentenauswahl.xaml</DependentUpon>
     </Compile>
@@ -126,27 +82,8 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="PCcase.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PSU.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="RAM.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="SSD.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PCcase.xaml.cs">
-      <DependentUpon>PCcase.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

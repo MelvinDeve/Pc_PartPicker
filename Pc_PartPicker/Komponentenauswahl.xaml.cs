@@ -26,63 +26,62 @@ namespace Pc_PartPicker
 
         private void btn_case_Click(object sender, RoutedEventArgs e)
         {
-            PCcase pcase = new PCcase();
-            pcase.ShowDialog();
-
+            Build build = new Build();
+            build.ShowDialog();
         }
 
         private void btn_CPU_Click(object sender, RoutedEventArgs e)
         {
-            CPU cpu = new CPU();
-            cpu.ShowDialog();
+            Build build = new Build();
+            build.ShowDialog();
         }
 
         private void btn_RAM_Click(object sender, RoutedEventArgs e)
         {
-            RAM ram = new RAM();
-            ram.ShowDialog();
+            Build build = new Build();
+            build.ShowDialog();
         }
 
         private void btn_GPU_Click(object sender, RoutedEventArgs e)
         {
-            GPU gpu = new GPU();
-            gpu.ShowDialog();
+            Build build = new Build();
+            build.ShowDialog();
         }
 
         private void btn_Mainboard_Click(object sender, RoutedEventArgs e)
         {
-            Mainboard mainboard = new Mainboard();
-            mainboard.ShowDialog();
+            Build build = new Build();
+            build.ShowDialog();
         }
 
         private void btn_HDD_Click(object sender, RoutedEventArgs e)
         {
-            SSD ssd = new SSD();
-            ssd.ShowDialog();
+            Build build = new Build();
+            build.ShowDialog();
         }
 
         private void btn_SSD_Click(object sender, RoutedEventArgs e)
         {
-            HDD hdd = new HDD();
-            hdd.ShowDialog();
+            Build build = new Build();
+            build.ShowDialog();
         }
 
         private void btn_PSU_Click(object sender, RoutedEventArgs e)
         {
-            PSU psu = new PSU();
-            psu.ShowDialog();
+            Build build = new Build();
+            build.ShowDialog();
         }
 
         private void btn_CPU_Cooler_Click(object sender, RoutedEventArgs e)
         {
-            CPUcooler cpucooler = new CPUcooler();
-            cpucooler.ShowDialog();
+            Build build = new Build();
+            build.ShowDialog();
         }
 
         private void btn_casecooler_Click(object sender, RoutedEventArgs e)
         {
-            casecooler casecooler = new casecooler();
-            casecooler.ShowDialog();
+            Build build = new Build();
+            build.ShowDialog();
         }
 
        
