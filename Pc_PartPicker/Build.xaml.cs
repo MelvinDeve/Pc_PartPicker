@@ -33,5 +33,16 @@ namespace Pc_PartPicker
             TableItems.DataContext = TabData.DefaultView;
                 
         }
+
+        private void btn_overview_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_menu_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            main.ShowDialog();
+        }
     }
 }
