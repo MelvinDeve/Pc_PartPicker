@@ -17,7 +17,7 @@
                 <TextBlock Text="Main Menu" FontSize="30" Height="35"  />
             </StackPanel>
         </Button>
-        <Button x:Name="btn_overview" Margin="400,382,10,41" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White">
+        <Button x:Name="btn_overview" Margin="400,382,10,41" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btn_overview_Click">
             <StackPanel>
                 <Image Source="assets/componentlist.png" Height="35" Width="36" />
                 <TextBlock Text="Overview" FontSize="30" Height="35"/>

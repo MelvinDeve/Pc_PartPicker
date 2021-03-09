@@ -83,5 +83,10 @@ namespace Pc_PartPicker
             Build build = new Build();
             build.ShowDialog();
         }
+
+        private void btn_exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
