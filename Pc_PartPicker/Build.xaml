@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pc_PartPicker"
         mc:Ignorable="d"
-        Title="Build" Height="450" Width="800">
+        Title="Build" Height="500" Width="800">
     <Grid Background="#FF201E2D">
         <DataGrid Background="#FF201E2D" Name="TableItems" ItemsSource="{Binding}" RowBackground="#FF201E2D"/>
     </Grid>
