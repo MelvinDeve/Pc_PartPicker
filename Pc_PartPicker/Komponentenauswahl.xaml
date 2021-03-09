@@ -1,0 +1,25 @@
+﻿<Window x:Class="Pc_PartPicker.Komponentenauswahl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pc_PartPicker"
+        mc:Ignorable="d"
+        Title="Komponentenauswahl" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btn_case" Content="&#xA;&#xA;&#xA;Gehäuse" HorizontalAlignment="Left" Height="83" Margin="66,45,0,0" VerticalAlignment="Top" Width="96" Click="btn_case_Click">
+            <Image x:Name="case" Source="Gehäuse.png"  Margin="87,48,650,315"  />
+        </Button>
+        <Button x:Name="btn_SSD" Content="&#xA;&#xA;&#xA;SSD" HorizontalAlignment="Left" Height="83" Margin="188,158,0,0" VerticalAlignment="Top" Width="96"/>
+        <Button x:Name="btn_RAM" Content="&#xA;&#xA;&#xA;Arbeitsspeicher" HorizontalAlignment="Left" Height="83" Margin="540,45,0,0" VerticalAlignment="Top" Width="96"/>
+        <Button x:Name="btn_GPU" Content="&#xA;&#xA;&#xA;Grafikkarte" HorizontalAlignment="Left" Height="83" Margin="425,45,0,0" VerticalAlignment="Top" Width="96"/>
+        <Button x:Name="btn_Mainboard" Content="&#xA;&#xA;&#xA;Mainboard" HorizontalAlignment="Left" Height="83" Margin="306,45,0,0" VerticalAlignment="Top" Width="96"/>
+        <Button x:Name="btn_CPU" Content="&#xA;&#xA;&#xA;CPU" HorizontalAlignment="Left" Height="83" Margin="188,45,0,0" VerticalAlignment="Top" Width="96" />
+        <Button x:Name="btn_HDD" Content="&#xA;&#xA;&#xA;Festplatte" HorizontalAlignment="Left" Height="83" Margin="66,158,0,0" VerticalAlignment="Top" Width="96"/>
+        <Button x:Name="btn_casecooler" Content="&#xA;&#xA;&#xA;Gehäuselüfter" HorizontalAlignment="Left" Height="83" Margin="540,158,0,0" VerticalAlignment="Top" Width="96"/>
+        <Button x:Name="btn_CPU_Cooler" Content="&#xA;&#xA;&#xA;CPU Kühler" HorizontalAlignment="Left" Height="83" Margin="425,158,0,0" VerticalAlignment="Top" Width="96"/>
+        <Button x:Name="btn_PSU" Content="&#xA;&#xA;&#xA;Netzteil" HorizontalAlignment="Left" Height="83" Margin="306,158,0,0" VerticalAlignment="Top" Width="96"/>
+       
+
+    </Grid>
+</Window>

@@ -55,6 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Komponentenauswahl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -64,12 +68,22 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="Komponentenauswahl.xaml.cs">
+      <DependentUpon>Komponentenauswahl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PCcase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PCcase.xaml.cs">
+      <DependentUpon>PCcase.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -94,6 +108,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Arbeitsspeicher.png" />
+    <Resource Include="assets\CPU-Kühler.png" />
+    <Resource Include="assets\CPU.png" />
+    <Resource Include="assets\Festplatte.png" />
+    <Resource Include="assets\Gehäuse.png" />
+    <Resource Include="assets\Grafikkarte.png" />
+    <Resource Include="assets\Mainboard.png" />
+    <Resource Include="assets\Netzteil.png" />
+    <Resource Include="assets\Soundkarte.png" />
+    <Resource Include="assets\SSD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Gehäuse.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
