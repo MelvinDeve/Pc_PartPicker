@@ -30,6 +30,9 @@ namespace Pc_PartPicker
             TabData.Columns.Add("Name1");
             TabData.Columns.Add("Name2");
             TabData.Rows.Add(new object[] { 123, "image.png", "Foo", "Bar" });
+            TabData.Rows.Add(new object[] { 123, "image.png", "Foo", "Bar" });
+            TabData.Rows.Add(new object[] { 123, "image.png", "Foo", "Bar" });
+            TabData.Rows.Add(new object[] { 123, "image.png", "Foo", "Bar" });
             TableItems.DataContext = TabData.DefaultView;
                 
         }
