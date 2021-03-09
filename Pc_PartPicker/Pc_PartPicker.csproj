@@ -75,6 +75,7 @@
       <DependentUpon>Build.xaml</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="Database.cs" />
     <Compile Include="Komponentenauswahl.xaml.cs">
       <DependentUpon>Komponentenauswahl.xaml</DependentUpon>
     </Compile>
@@ -84,6 +85,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -101,6 +103,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
