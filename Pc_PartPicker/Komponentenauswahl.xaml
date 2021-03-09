@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:Pc_PartPicker"
         mc:Ignorable="d"
         Icon="assets/ppp-logo.png"
-        Title="Komponentenauswahl" Height="450" Width="800" WindowStartupLocation="CenterScreen">
-    <Grid Background="#FF201E2D" >
+        Title="Komponentenauswahl" Height="500" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FF201E2D" Height="500" Width="800" >
         <Button Grid.Column="0" x:Name="btn_case"  Width="96" Height="83" Margin="66,45,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Background="#FFEB2A53" Click="btn_case_Click">
             <Image x:Name="case" Source="assets/Gehäuse.png" Height="87" HorizontalAlignment="Left" Width="62" VerticalAlignment="Top" />
         </Button>
@@ -49,6 +49,20 @@
         <Label Content="HDD" HorizontalAlignment="Left" Height="47" Margin="213,214,0,0" VerticalAlignment="Top" Width="130"/>
         <Label Content="Gehäuse Lüfter" HorizontalAlignment="Left" Height="47" Margin="540,214,0,0" VerticalAlignment="Top" Width="130"/>
 
+        <Line Stroke="#FF171520" X1="0" Y1="380" X2="800" Y2="380" StrokeThickness="4"/>
+        <Button x:Name="btn_exit" Margin="0,382,400,41" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btn_exit_Click">
+            <StackPanel>
+                <Image Source="assets/Exit.png" Height="35" Width="36" />
+                <TextBlock Text="Exit" FontSize="30" Height="35"/>
+            </StackPanel>
+        </Button>
+        <Button Margin="400,382,10,41" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White">
+            <StackPanel>
+                <Image Source="assets/Tools.png" Height="35" Width="36" />
+                <TextBlock Text="View Build" FontSize="30" Height="35"/>
+            </StackPanel>
+        </Button>
+        <Line Stroke="#FF171520" X1="400" Y1="380" X2="400" Y2="500" StrokeThickness="4"/>
 
     </Grid>
 </Window>

@@ -12,13 +12,13 @@
         <Label x:Name="lbl_ppp" Content="PCPARTPICKER" HorizontalAlignment="Center" Foreground="White" FontSize="50" Width="338" Margin="231,240,231,193"/>
         <Label x:Name="lbl_slogan" Content="BUILD YOUR DREAM" HorizontalAlignment="Left" Margin="258,296,0,154" FontSize="30" Foreground="#FFEB2A53"/>
         <Line Stroke="#FF171520" X1="0" Y1="380" X2="800" Y2="380" StrokeThickness="4"/>
-        <Button x:Name="btn_exit" Margin="0,382,400,41" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White">
+        <Button x:Name="btn_exit" Margin="0,382,400,41" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btn_exit_Click">
             <StackPanel>
                 <Image Source="assets/Exit.png" Height="35" Width="36" />
                 <TextBlock Text="Exit" FontSize="30" Height="35"/>
             </StackPanel>
         </Button>
-        <Button Margin="400,382,10,41" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click">
+        <Button Margin="400,382,10,41" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click" >
             <StackPanel>
                 <Image Source="assets/Tools.png" Height="35" Width="36" />
                 <TextBlock Text="Build" FontSize="30" Height="35"/>
