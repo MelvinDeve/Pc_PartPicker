@@ -6,8 +6,7 @@
         xmlns:local="clr-namespace:Pc_PartPicker"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Label Content="Test1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="303,152,0,0" Height="46" Width="76" FontSize="24"/>
-
+    <Grid Background="#FF201E2D" Width="800" Height="500">
+        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="324,131,0,0"/>
     </Grid>
 </Window>
