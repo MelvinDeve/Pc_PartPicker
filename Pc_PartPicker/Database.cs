@@ -49,6 +49,10 @@ namespace Pc_PartPicker
                 "CONSTRAINT FK_articleComments foreign key (partId) references Parts(id), " +
                 "CONSTRAINT FK_articleComments foreign key (propId) references Properties(id))";
 
+            string Createsql4 = "CREATE TABLE TypeProperties(id int auto_increment primary key unique not null, typeId int not null, propId not null, " +
+                "CONSTRAINT FK_articleComments foreign key (typeId) references Type(id), " +
+                "CONSTRAINT FK_articleComments foreign key (propId) references Properties(id))";
+
             sqlite_cmd = conn.CreateCommand();
             /*
             sqlite_cmd.CommandText = Createsql;
@@ -56,9 +60,11 @@ namespace Pc_PartPicker
             sqlite_cmd.CommandText = Createsql1;
             sqlite_cmd.ExecuteNonQuery();
             sqlite_cmd.CommandText = Createsql2;
+            sqlite_cmd.ExecuteNonQuery();            
+            sqlite_cmd.CommandText = Createsql3;
             sqlite_cmd.ExecuteNonQuery();
             */
-            sqlite_cmd.CommandText = Createsql3;
+            sqlite_cmd.CommandText = Createsql4;
             sqlite_cmd.ExecuteNonQuery();
 
         }

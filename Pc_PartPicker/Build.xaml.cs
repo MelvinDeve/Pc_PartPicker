@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,15 @@ namespace Pc_PartPicker
         public Build()
         {
             InitializeComponent();
+            DataTable TabData = new DataTable();
+
+            TabData.Columns.Add("id");
+            TabData.Columns.Add("image");
+            TabData.Columns.Add("Name1");
+            TabData.Columns.Add("Name2");
+            TabData.Rows.Add(new object[] { 123, "image.png", "Foo", "Bar" });
+            TableItems.DataContext = TabData.DefaultView;
+                
         }
     }
 }

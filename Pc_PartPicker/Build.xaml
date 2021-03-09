@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="Build" Height="450" Width="800">
     <Grid Background="#FF201E2D">
-        
+        <DataGrid Background="#FF201E2D" Name="TableItems" ItemsSource="{Binding}" RowBackground="#FF201E2D"/>
     </Grid>
 </Window>
