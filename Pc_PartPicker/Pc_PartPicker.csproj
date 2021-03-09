@@ -55,7 +55,55 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="casecooler.xaml.cs">
+      <DependentUpon>casecooler.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CPUcooler.xaml.cs">
+      <DependentUpon>CPUcooler.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GPU.xaml.cs">
+      <DependentUpon>GPU.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HDD.xaml.cs">
+      <DependentUpon>HDD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mainboard.xaml.cs">
+      <DependentUpon>Mainboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PSU.xaml.cs">
+      <DependentUpon>PSU.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RAM.xaml.cs">
+      <DependentUpon>RAM.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SSD.xaml.cs">
+      <DependentUpon>SSD.xaml</DependentUpon>
+    </Compile>
+    <Page Include="casecooler.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPU.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CPUcooler.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GPU.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HDD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Komponentenauswahl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Mainboard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -68,6 +116,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="CPU.xaml.cs">
+      <DependentUpon>CPU.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Komponentenauswahl.xaml.cs">
       <DependentUpon>Komponentenauswahl.xaml</DependentUpon>
     </Compile>
@@ -76,6 +127,18 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="PCcase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PSU.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RAM.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SSD.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -118,11 +181,13 @@
     <Resource Include="assets\Grafikkarte.png" />
     <Resource Include="assets\Mainboard.png" />
     <Resource Include="assets\Netzteil.png" />
-    <Resource Include="assets\Soundkarte.png" />
     <Resource Include="assets\SSD.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Gehäuse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Gehäuse-Lüfter.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
