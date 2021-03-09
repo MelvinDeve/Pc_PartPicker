@@ -62,9 +62,9 @@
         </Button>
 
         <Button x:Name="btn_casecooler" HorizontalAlignment="Left" Height="83" Margin="588,245,0,0" VerticalAlignment="Top" Width="96" Background="#FFEB2A53" Click="btn_casecooler_Click">
-            <StackPanel>
-                <Image x:Name="casecooler" Source="assets/Gehäuse-Lüfter.png" Height="54" Width="59" HorizontalAlignment="Center"/>
-                <TextBlock Text="case fan" FontSize="17" Height="32" Margin="8,0,-5,0" Width="67"/>
+            <StackPanel Width="81" Height="67">
+                <Image x:Name="casecooler" Source="assets/Gehäuse-Lüfter.png" Height="48" Width="60" HorizontalAlignment="Center" Margin="11,0,10,0"/>
+                <TextBlock Text="case fan" FontSize="17" Height="25" Margin="11,0,10,0"/>
             </StackPanel>
         </Button>
 
@@ -86,7 +86,7 @@
         <Button x:Name="btn_exit" Margin="0,382,400,41" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btn_exit_Click">
             <StackPanel>
                 <Image Source="assets/Exit.png" Height="35" Width="36" />
-                <TextBlock FontSize="30" Height="35"><Run Text="Main"/><Run Text=" "/><Run Text="Menu"/></TextBlock>
+                <TextBlock FontSize="30" Height="35" Text="Main Menu" />
             </StackPanel>
         </Button>
         <Button Margin="400,382,10,41" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White">
