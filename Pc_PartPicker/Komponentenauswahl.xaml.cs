@@ -10,25 +10,25 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Pc_PartPicker
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Komponentenauswahl.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Komponentenauswahl : Window
     {
-        public MainWindow()
+        public Komponentenauswahl()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btn_case_Click(object sender, RoutedEventArgs e)
         {
-            Komponentenauswahl komponenten = new Komponentenauswahl();
-            komponenten.ShowDialog();
+            PCcase pcase = new PCcase();
+            pcase.ShowDialog();
+
         }
     }
 }
