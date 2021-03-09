@@ -141,5 +141,11 @@
   <ItemGroup>
     <Resource Include="assets\componentlist.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\load.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\save.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Pc_PartPicker"
         mc:Ignorable="d"
         Icon="assets/ppp-logo.png"
-        Title="Build" Height="500" Width="800" WindowStartupLocation="CenterScreen" Background="#FF201E2D">
+        Title="Parts" Height="500" Width="800" WindowStartupLocation="CenterScreen" Background="#FF201E2D">
     <Grid Background="#FF201E2D" Height="500" Width="800">
         <Image x:Name="img_ppp" Height="100" Width="130"  HorizontalAlignment="Center" Source="assets/ppp-logo.png" Margin="335,16,335,384"/>
 
