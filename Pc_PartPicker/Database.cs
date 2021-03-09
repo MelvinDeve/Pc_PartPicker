@@ -19,7 +19,7 @@ namespace Pc_PartPicker
             ReadData(sqlite_conn);
         }
         */
-        static SQLiteConnection CreateConnection()
+        public static SQLiteConnection CreateConnection()
         {
 
             SQLiteConnection sqlite_conn;
@@ -37,16 +37,28 @@ namespace Pc_PartPicker
             return sqlite_conn;
         }
 
-        static void CreateTable(SQLiteConnection conn)
+        public static void CreateTable(SQLiteConnection conn)
         {
 
             SQLiteCommand sqlite_cmd;
-            string Createsql = "CREATE TABLE SampleTable(Col1 VARCHAR(20), Col2 INT)";
-            string Createsql1 = "CREATE TABLE SampleTable1(Col1 VARCHAR(20), Col2 INT)";
+            string Createsql = "CREATE TABLE Type(id int auto_increment primary key unique not null, name varchar(20))";
+            string Createsql1 = "CREATE TABLE Properties(id int auto_increment primary key unique not null, propName varchar(20))";
+            string Createsql2 = "CREATE TABLE Parts(id int auto_increment primary key unique not null, typeId int not null, name varchar(60) not null, price double, image longblob, " +
+                "CONSTRAINT FK_articleComments foreign key (typeId) references Type(id))";
+            string Createsql3 = "CREATE TABLE PartProperties(id int auto_increment primary key unique not null, partId int not null, propId not null, propValue varchar(50), " +
+                "CONSTRAINT FK_articleComments foreign key (partId) references Parts(id), " +
+                "CONSTRAINT FK_articleComments foreign key (propId) references Properties(id))";
+
             sqlite_cmd = conn.CreateCommand();
+            /*
             sqlite_cmd.CommandText = Createsql;
             sqlite_cmd.ExecuteNonQuery();
             sqlite_cmd.CommandText = Createsql1;
+            sqlite_cmd.ExecuteNonQuery();
+            sqlite_cmd.CommandText = Createsql2;
+            sqlite_cmd.ExecuteNonQuery();
+            */
+            sqlite_cmd.CommandText = Createsql3;
             sqlite_cmd.ExecuteNonQuery();
 
         }
