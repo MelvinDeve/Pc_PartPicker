@@ -8,7 +8,6 @@
         Title="Komponentenauswahl" Height="450" Width="800">
     <Grid>
         <Button x:Name="btn_case" Content="&#xA;&#xA;&#xA;Gehäuse" HorizontalAlignment="Left" Height="83" Margin="66,45,0,0" VerticalAlignment="Top" Width="96" Click="btn_case_Click">
-            <Image x:Name="case" Source="Gehäuse.png"  Margin="87,48,650,315"  />
         </Button>
         <Button x:Name="btn_SSD" Content="&#xA;&#xA;&#xA;SSD" HorizontalAlignment="Left" Height="83" Margin="188,158,0,0" VerticalAlignment="Top" Width="96"/>
         <Button x:Name="btn_RAM" Content="&#xA;&#xA;&#xA;Arbeitsspeicher" HorizontalAlignment="Left" Height="83" Margin="540,45,0,0" VerticalAlignment="Top" Width="96"/>

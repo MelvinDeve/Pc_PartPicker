@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pc_PartPicker"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Icon="assets/ppp-logo.png"
+        Title="MainWindow" Height="500" Width="800" WindowStartupLocation="CenterScreen" Background="#FF201E2D">
     <Grid Background="#FF201E2D" Width="800" Height="500">
-        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="324,131,0,0"/>
+        <Image x:Name="img_ppp" Height="200" Width="230"  HorizontalAlignment="Center" Source="assets/ppp-logo.png" Margin="285,52,285,248"/>
+        <Label x:Name="txtBx_ppp" Content="PCPARTPICKER" HorizontalAlignment="Center" Foreground="White" FontSize="50" Width="338" Margin="231,240,231,193"/>
+        <Label x:Name="lbl_slogan" Content="BUILD YOUR DREAM" HorizontalAlignment="Left" Margin="258,296,0,154" FontSize="30" Foreground="#FFEB2A53"/>
+        <Line Stroke="#FF171520" X1="0" Y1="400" X2="800" Y2="400" StrokeThickness="4"/>
+        <Button Margin="0,395,665,28" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White">
+            <StackPanel>
+                <Image Source="assets/Exit.png" Height="35" Width="36" />
+                <TextBlock Text="Exit" FontSize="30" Height="35"/>
+            </StackPanel>
+        </Button>
+
     </Grid>
 </Window>
