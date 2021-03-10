@@ -106,7 +106,10 @@ namespace Pc_PartPicker
 
         private void btn_exit_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            this.Hide();
+            MainWindow main = new MainWindow();
+            main.ShowDialog();
+            this.Show();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
