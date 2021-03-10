@@ -16,9 +16,12 @@ namespace Pc_PartPicker
     {
         public MainWindow()
         {
+
             SQLiteConnection sqlite_conn;
             sqlite_conn = Database.CreateConnection();
             Database db = new Database();
+            Database.CreateTable(sqlite_conn);
+            Database.InsertData(sqlite_conn);
             Database.ReadData(sqlite_conn);
             InitializeComponent();
             
