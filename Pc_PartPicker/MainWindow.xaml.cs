@@ -19,7 +19,19 @@ namespace Pc_PartPicker
             InitializeComponent();
             SQLiteConnection sqlite_conn;
             sqlite_conn = Database.CreateConnection();
-            Database.CreateTable(sqlite_conn);
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Komponentenauswahl komponenten = new Komponentenauswahl();
+            komponenten.ShowDialog();
+        }
+
+        private void btn_exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+       
     }
 }
