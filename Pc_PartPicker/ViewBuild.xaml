@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pc_PartPicker"
         mc:Ignorable="d"
-        
-        Title="ViewBuild" Height="500" Width="800" WindowStartupLocation="CenterScreen">
+        Icon="assets/ppp-logo.png"
+        Title="ViewBuild" Height="500" Width="800" WindowStartupLocation="CenterScreen" MinWidth="800" MinHeight="500">
     <Grid Background="#FF201E2D" Height="500" Width="800">
 
         <Image x:Name="img_ppp" Height="100" Width="130"  HorizontalAlignment="Center" Source="assets/ppp-logo.png" Margin="335,16,335,384"/>

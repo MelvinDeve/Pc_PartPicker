@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Pc_PartPicker"
         mc:Ignorable="d"
         Icon="assets/ppp-logo.png"
-        Title="MainMenu" Height="500" Width="800" WindowStartupLocation="CenterScreen" Background="#FF201E2D">
+        Title="MainMenu" Height="500" Width="800" WindowStartupLocation="CenterScreen" Background="#FF201E2D" MinWidth="800" MinHeight="500">
     <Grid Background="#FF201E2D" Width="800" Height="500">
         <Image x:Name="img_ppp" Height="200" Width="230"  HorizontalAlignment="Center" Source="assets/ppp-logo.png" Margin="285,52,285,248"/>
         <Label x:Name="lbl_ppp" Content="PCPARTPICKER" HorizontalAlignment="Center" Foreground="White" FontSize="50" Width="338" Margin="231,240,231,193"/>
