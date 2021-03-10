@@ -40,13 +40,15 @@ namespace Pc_PartPicker
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            this.Hide();
             Komponentenauswahl komponenten = new Komponentenauswahl();
             komponenten.ShowDialog();
+            this.Show();
         }
 
         private void btn_exit_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Environment.Exit(0);
         }
     }
 }
