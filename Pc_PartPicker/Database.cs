@@ -43,7 +43,7 @@ namespace Pc_PartPicker
             SQLiteCommand sqlite_cmd;
             string Createsql = "CREATE TABLE Type(id int auto_increment primary key unique not null, name varchar(20))";
             string Createsql1 = "CREATE TABLE Properties(id int auto_increment primary key unique not null, propName varchar(20))";
-            string Createsql2 = "CREATE TABLE Parts(id int auto_increment primary key unique not null, typeId int not null, name varchar(60) not null, price double, image longblob, " +
+            string Createsql2 = "CREATE TABLE Parts(id int auto_increment primary key unique not null, typeId int not null, name varchar(60) not null, price double, image String, " +
                 "CONSTRAINT FK_articleComments foreign key (typeId) references Type(id))";
             string Createsql3 = "CREATE TABLE PartProperties(id int auto_increment primary key unique not null, partId int not null, propId not null, propValue varchar(50), " +
                 "CONSTRAINT FK_articleComments foreign key (partId) references Parts(id), " +
@@ -52,6 +52,7 @@ namespace Pc_PartPicker
             string Createsql4 = "CREATE TABLE TypeProperties(id int auto_increment primary key unique not null, typeId int not null, propId not null, " +
                 "CONSTRAINT FK_articleComments foreign key (typeId) references Type(id), " +
                 "CONSTRAINT FK_articleComments foreign key (propId) references Properties(id))";
+            string Createsql5 = "DROP TABLE Parts";
 
             sqlite_cmd = conn.CreateCommand();
             /*
@@ -64,7 +65,7 @@ namespace Pc_PartPicker
             sqlite_cmd.CommandText = Createsql3;
             sqlite_cmd.ExecuteNonQuery();
             */
-            sqlite_cmd.CommandText = Createsql4;
+            sqlite_cmd.CommandText = Createsql2;
             sqlite_cmd.ExecuteNonQuery();
 
         }
