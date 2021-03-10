@@ -26,67 +26,95 @@ namespace Pc_PartPicker
 
         private void btn_case_Click(object sender, RoutedEventArgs e)
         {
+            this.Hide();
             Build build = new Build();
             build.ShowDialog();
+            this.Show();
         }
 
         private void btn_CPU_Click(object sender, RoutedEventArgs e)
         {
+            this.Hide();
             Build build = new Build();
             build.ShowDialog();
+            this.Show();
         }
 
         private void btn_RAM_Click(object sender, RoutedEventArgs e)
         {
+            this.Hide();
             Build build = new Build();
             build.ShowDialog();
+            this.Show();
         }
 
         private void btn_GPU_Click(object sender, RoutedEventArgs e)
         {
+            this.Hide();
             Build build = new Build();
             build.ShowDialog();
+            this.Show();
         }
 
         private void btn_Mainboard_Click(object sender, RoutedEventArgs e)
         {
+            this.Hide();
             Build build = new Build();
             build.ShowDialog();
+            this.Show();
         }
 
         private void btn_HDD_Click(object sender, RoutedEventArgs e)
         {
+            this.Hide();
             Build build = new Build();
             build.ShowDialog();
+            this.Show();
         }
 
         private void btn_SSD_Click(object sender, RoutedEventArgs e)
         {
+            this.Hide();
             Build build = new Build();
             build.ShowDialog();
+            this.Show();
         }
 
         private void btn_PSU_Click(object sender, RoutedEventArgs e)
         {
+            this.Hide();
             Build build = new Build();
             build.ShowDialog();
+            this.Show();
         }
 
         private void btn_CPU_Cooler_Click(object sender, RoutedEventArgs e)
         {
+            this.Hide();
             Build build = new Build();
             build.ShowDialog();
+            this.Show();
         }
 
         private void btn_casecooler_Click(object sender, RoutedEventArgs e)
         {
+            this.Hide();
             Build build = new Build();
             build.ShowDialog();
+            this.Show();
         }
 
         private void btn_exit_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            ViewBuild view = new ViewBuild();
+            view.ShowDialog();
+            this.Show();
         }
     }
 }

@@ -74,7 +74,7 @@
                 <TextBlock FontSize="30" Height="35" Text="Main Menu" />
             </StackPanel>
         </Button>
-        <Button Margin="400,382,10,41" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White">
+        <Button Margin="400,382,10,41" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click">
             <StackPanel>
                 <Image Source="assets/view.png" Height="35" Width="36" />
                 <TextBlock Text="View Build" FontSize="30" Height="35"/>

@@ -23,5 +23,21 @@ namespace Pc_PartPicker
         {
             InitializeComponent();
         }
+
+        private void btn_menu_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            MainWindow main = new MainWindow();
+            main.ShowDialog();
+            this.Show();
+        }
+
+        private void btn_overview_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            Komponentenauswahl komp = new Komponentenauswahl();
+            komp.ShowDialog();
+            this.Show();
+        }
     }
 }
