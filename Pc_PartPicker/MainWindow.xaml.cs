@@ -16,9 +16,14 @@ namespace Pc_PartPicker
     {
         public MainWindow()
         {
-            InitializeComponent();
             SQLiteConnection sqlite_conn;
             sqlite_conn = Database.CreateConnection();
+            Database db = new Database();
+            Database.ReadData(sqlite_conn);
+            InitializeComponent();
+            
+            
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
