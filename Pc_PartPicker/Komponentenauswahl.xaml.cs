@@ -33,6 +33,50 @@ namespace Pc_PartPicker
             SetWindowLong(hwnd, GWL_STYLE, GetWindowLong(hwnd, GWL_STYLE) & ~WS_SYSMENU);
         }
 
+        void color()
+        {
+            if(configuration.pcCase != null)
+            {
+                btn_CPU.Background = Brushes.Green;
+            }
+            else { btn_CPU.Background = Brushes.Red; }
+            if (configuration.cpu != null)
+            {
+                btn_CPU.Background = Brushes.Green;
+            }
+            else { btn_CPU.Background = Brushes.Red; }
+            if (configuration.cpuCooler != null)
+            {
+                btn_CPU.Background = Brushes.Green;
+            }
+            else { btn_CPU.Background = Brushes.Red; }
+            if (configuration.motherboard != null)
+            {
+                btn_CPU.Background = Brushes.Green;
+            }
+            else { btn_CPU.Background = Brushes.Red; }
+            if (configuration.memory != null)
+            {
+                btn_CPU.Background = Brushes.Green;
+            }
+            else { btn_CPU.Background = Brushes.Red; }
+            if (configuration.gpu != null)
+            {
+                btn_CPU.Background = Brushes.Green;
+            }
+            else { btn_CPU.Background = Brushes.Red; }
+            if (configuration.storage != null)
+            {
+                btn_CPU.Background = Brushes.Green;
+            }
+            else { btn_CPU.Background = Brushes.Red; }
+            if (configuration.psu != null)
+            {
+                btn_CPU.Background = Brushes.Green;
+            }
+            else { btn_CPU.Background = Brushes.Red; }
+
+        }
         public Komponentenauswahl()
         {
             InitializeComponent();
