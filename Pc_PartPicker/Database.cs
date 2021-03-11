@@ -10,16 +10,7 @@ namespace Pc_PartPicker
 {
     class Database
     {
-        /*
-        static void Main(string[] args)
-        {
-            SQLiteConnection sqlite_conn;
-            sqlite_conn = CreateConnection();
-            CreateTable(sqlite_conn);
-            InsertData(sqlite_conn);
-            ReadData(sqlite_conn);
-        }
-        */
+        
         public static SQLiteConnection CreateConnection()
         {
 
