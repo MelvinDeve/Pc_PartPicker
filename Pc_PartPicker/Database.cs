@@ -5,6 +5,7 @@ using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Pc_PartPicker
 {
@@ -77,11 +78,12 @@ namespace Pc_PartPicker
                 TabData.Columns.Add(myreader);
             }
             TabData.Columns.Add("Price");
+            TabData.Columns.Add("Image", typeof(DataTemplate));
 
             SQLiteDataReader sqlite_datareader_products;
             SQLiteCommand sqlite_cmd_products;
             sqlite_cmd_products = conn.CreateCommand();
-            sqlite_cmd_products.CommandText = "SELECT name, price, id FROM Parts WHERE typeId = " + partType + ";";
+            sqlite_cmd_products.CommandText = "SELECT name, price, id, image FROM Parts WHERE typeId = " + partType + ";";
             sqlite_datareader_products = sqlite_cmd_products.ExecuteReader();
             while (sqlite_datareader_products.Read())
             {
@@ -89,6 +91,7 @@ namespace Pc_PartPicker
                 string partName = sqlite_datareader_products.GetString(0);
                 double partPrice = sqlite_datareader_products.GetDouble(1);
                 int partId = sqlite_datareader_products.GetInt32(2);
+                string partImage = sqlite_datareader_products.GetString(3);
                 row.Add(partName);
                 foreach(int colId in Columns)
                 {
@@ -103,6 +106,7 @@ namespace Pc_PartPicker
                     }
                 }
                 row.Add(partPrice);
+                row.Add(partImage);
                 if (checkRow(partType, row))
                 {
                     TabData.Rows.Add(row.ToArray());
