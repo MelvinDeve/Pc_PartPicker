@@ -155,36 +155,61 @@ namespace Pc_PartPicker
                 btn_case.Background = new SolidColorBrush(Color.FromRgb(235, 42, 83 ));
             }
             else { btn_case.Background = Brushes.Green; }
+
+
+
             if (configuration.cpu == null)
             {
                 btn_CPU.Background = new SolidColorBrush(Color.FromRgb(235, 42, 83));
             }
-            else { btn_CPU.Background = Brushes.Green; }
+            else 
+            {
+                btn_CPU.Background = Brushes.Green;
+            }
+
+
+
             if (configuration.cpuCooler == null)
             {
-                btn_CPU_Cooler.Background = new SolidColorBrush(Color.FromRgb(235, 42, 83));
+             
+                if ((configuration.cpu != null) && (configuration.cpu.integratedCooler == true))
+                {
+                    btn_CPU_Cooler.Background = Brushes.Yellow;
+                }
+                else { btn_CPU_Cooler.Background = new SolidColorBrush(Color.FromRgb(235, 42, 83)); }
             }
-            else { btn_CPU_Cooler.Background = Brushes.Green; }
+
+            else{ btn_CPU_Cooler.Background = Brushes.Green; }
+
             if (configuration.motherboard == null)
             {
                 btn_Mainboard.Background = new SolidColorBrush(Color.FromRgb(235, 42, 83));
             }
             else { btn_Mainboard.Background = Brushes.Green; }
+
             if (configuration.memory.Count == 0)
             {
                 btn_RAM.Background = new SolidColorBrush(Color.FromRgb(235, 42, 83));
             }
             else { btn_RAM.Background = Brushes.Green; }
+
             if (configuration.gpu == null)
             {
-                btn_GPU.Background = new SolidColorBrush(Color.FromRgb(235, 42, 83));
+                if ((configuration.cpu != null) && (configuration.cpu.integratedGraphics == true))
+                {
+                    btn_GPU.Background = Brushes.Yellow;
+                }
+                else { btn_GPU.Background = new SolidColorBrush(Color.FromRgb(235, 42, 83)); }
             }
-            else { btn_GPU.Background = Brushes.Green; }
+             
+            else{ btn_GPU.Background = Brushes.Green; }
+
             if (configuration.storage.Count == 0)
             {
                 btn_SSD.Background = new SolidColorBrush(Color.FromRgb(235, 42, 83));
             }
             else { btn_SSD.Background = Brushes.Green; }
+
             if (configuration.psu == null)
             {
                 btn_PSU.Background = new SolidColorBrush(Color.FromRgb(235, 42, 83));

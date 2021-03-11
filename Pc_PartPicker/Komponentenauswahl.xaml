@@ -9,14 +9,14 @@
         Title="ComponentView" Height="500" Width="800" WindowStartupLocation="CenterScreen" Background="#FF201E2D" MinWidth="800" MinHeight="500">
     <Grid Background="#FF201E2D" Height="500" Width="800" >
         <Image x:Name="img_ppp" Height="100" Width="130"  HorizontalAlignment="Center" Source="assets/ppp-logo.png" Margin="335,16,335,384"/>
-        <Button Grid.Column="0" x:Name="btn_case"  Width="96" Height="83" Margin="173,132,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btn_case_Click">
+        <Button Grid.Column="0" x:Name="btn_case"  Width="96" Height="83" Margin="173,132,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Background="#FFEB2A53" Click="btn_case_Click">
             <StackPanel>
                 <Image x:Name="case" Source="assets/Gehäuse.png" Height="57" HorizontalAlignment="Left" Width="60" VerticalAlignment="Top" />
                 <TextBlock Text="Case" FontSize="17" Height="25" Width="43"/>
             </StackPanel>
         </Button>
 
-        <Button x:Name="btn_CPU" HorizontalAlignment="Left" Height="83" Margin="293,132,0,0" VerticalAlignment="Top" Width="96" Click="btn_CPU_Click">
+        <Button x:Name="btn_CPU" HorizontalAlignment="Left" Height="83" Margin="293,132,0,0" VerticalAlignment="Top" Width="96" Background="#FFEB2A53" Click="btn_CPU_Click">
             <StackPanel>
                 <Image x:Name="CPU" Source="assets/CPU.png" Height="55" HorizontalAlignment="Left" Width="58" VerticalAlignment="Top" />
                 <TextBlock Text="CPU" FontSize="17" Height="25" Width="36"/>
