@@ -14,7 +14,6 @@ namespace Pc_PartPicker
         public int tdp { get; }
         public double price { get; }
 
-
         public Gpu(String name, String chipSet, String gpuMemory, String tdp, double price)
         {
             this.name = name;
