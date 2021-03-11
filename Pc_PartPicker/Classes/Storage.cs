@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pc_PartPicker.Classes
+namespace Pc_PartPicker
 {
     class Storage
     {
-        private String capacity { get; }
-        private String intface { get; }
+        public String capacity { get; }
+        public String intface { get; }
 
         public Storage(String capacity, String intface)
         {

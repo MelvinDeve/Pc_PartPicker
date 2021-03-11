@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,8 @@ using System.Windows.Shapes;
 
 namespace Pc_PartPicker
 {
+
+    
     /// <summary>
     /// Interaction logic for Build.xaml
     /// </summary>
@@ -27,6 +30,14 @@ namespace Pc_PartPicker
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
 
+
+
+
+        public void dostuff()
+        {
+
+        }
+
         void ToolWindow_Loaded(object sender, RoutedEventArgs e)
         {
             // Code to remove close box from window
@@ -34,20 +45,14 @@ namespace Pc_PartPicker
             SetWindowLong(hwnd, GWL_STYLE, GetWindowLong(hwnd, GWL_STYLE) & ~WS_SYSMENU);
         }
 
-        public Build()
+        public Build(int component)
         {
             InitializeComponent();
             Loaded += ToolWindow_Loaded;
             DataTable TabData = new DataTable();
+            SQLiteConnection sqlite_conn = Database.CreateConnection();
 
-            TabData.Columns.Add("id");
-            TabData.Columns.Add("image");
-            TabData.Columns.Add("Name1");
-            TabData.Columns.Add("Name2");
-            TabData.Rows.Add(new object[] { 123, "image.png", "Foo", "Bar" });
-            TabData.Rows.Add(new object[] { 123, "image.png", "Foo", "Bar" });
-            TabData.Rows.Add(new object[] { 123, "image.png", "Foo", "Bar" });
-            TabData.Rows.Add(new object[] { 123, "image.png", "Foo", "Bar" });
+            TabData = Database.ReadDataTable(sqlite_conn, component);
             TableItems.DataContext = TabData.DefaultView;
                 
         }

@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pc_PartPicker.Classes
+namespace Pc_PartPicker
 {
     class Psu
     {
-        private String efficiencyRating { get; }
-        private int wattage { get; }
+        public String efficiencyRating { get; }
+        public int wattage { get; }
 
         public Psu(String efficiencyRating, String wattage)
         {

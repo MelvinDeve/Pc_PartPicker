@@ -90,6 +90,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\Case.cs" />
+    <Compile Include="Classes\configuration.cs" />
     <Compile Include="Classes\CPU.cs" />
     <Compile Include="Classes\CPU_Cooler.cs" />
     <Compile Include="Classes\Gpu.cs" />

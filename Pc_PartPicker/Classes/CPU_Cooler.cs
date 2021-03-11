@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pc_PartPicker.Classes
+namespace Pc_PartPicker
 {
     class CPU_Cooler
     {
-        private String coolingType { get; }
-        private String tdpClass { get; }
-        private String socketComp { get; }
+        public String coolingType { get; }
+        public String tdpClass { get; }
+        public String socketComp { get; }
 
         public CPU_Cooler(String _coolingType, String _tdpClass, String _socketComp)
         {

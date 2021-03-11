@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pc_PartPicker.Classes
+namespace Pc_PartPicker
 {
     class Memory
     {
-        private String speed { get; }
-        private int modules { get; }
-        private String capacity { get; }
+        public String speed { get; }
+        public int modules { get; }
+        public String capacity { get; }
 
 
 

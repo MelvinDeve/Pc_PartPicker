@@ -42,7 +42,7 @@ namespace Pc_PartPicker
         private void btn_case_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
-            Build build = new Build();
+            Build build = new Build(Constants.CASECONST);
             build.ShowDialog();
             this.Show();
         }
@@ -50,7 +50,7 @@ namespace Pc_PartPicker
         private void btn_CPU_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
-            Build build = new Build();
+            Build build = new Build(Constants.CPUCONST);
             build.ShowDialog();
             this.Show();
         }
@@ -58,7 +58,7 @@ namespace Pc_PartPicker
         private void btn_RAM_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
-            Build build = new Build();
+            Build build = new Build(Constants.MEMORYCONST);
             build.ShowDialog();
             this.Show();
         }
@@ -66,7 +66,7 @@ namespace Pc_PartPicker
         private void btn_GPU_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
-            Build build = new Build();
+            Build build = new Build(Constants.GPUCONST);
             build.ShowDialog();
             this.Show();
         }
@@ -74,15 +74,7 @@ namespace Pc_PartPicker
         private void btn_Mainboard_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
-            Build build = new Build();
-            build.ShowDialog();
-            this.Show();
-        }
-
-        private void btn_HDD_Click(object sender, RoutedEventArgs e)
-        {
-            this.Hide();
-            Build build = new Build();
+            Build build = new Build(Constants.MOTHERBOARDCONST);
             build.ShowDialog();
             this.Show();
         }
@@ -90,7 +82,7 @@ namespace Pc_PartPicker
         private void btn_SSD_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
-            Build build = new Build();
+            Build build = new Build(Constants.STORAGECONST);
             build.ShowDialog();
             this.Show();
         }
@@ -98,7 +90,7 @@ namespace Pc_PartPicker
         private void btn_PSU_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
-            Build build = new Build();
+            Build build = new Build(Constants.PSUCONST);
             build.ShowDialog();
             this.Show();
         }
@@ -106,15 +98,7 @@ namespace Pc_PartPicker
         private void btn_CPU_Cooler_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
-            Build build = new Build();
-            build.ShowDialog();
-            this.Show();
-        }
-
-        private void btn_casecooler_Click(object sender, RoutedEventArgs e)
-        {
-            this.Hide();
-            Build build = new Build();
+            Build build = new Build(Constants.GPUCONST);
             build.ShowDialog();
             this.Show();
         }

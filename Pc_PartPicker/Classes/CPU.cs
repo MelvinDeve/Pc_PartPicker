@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pc_PartPicker.Classes
+namespace Pc_PartPicker
 {
     class CPU
     {
-        private String coreCount { get; }
-        private String threadCount { get; }
-        private String coreClock { get; }
-        private int TDP { get; }
-        private bool integratedGraphics { get; }
-        private bool integratedCooler { get; }
-        private String Socket { get; }
+        public String coreCount { get; }
+        public String threadCount { get; }
+        public String coreClock { get; }
+        public int TDP { get; }
+        public bool integratedGraphics { get; }
+        public bool integratedCooler { get; }
+        public String Socket { get; }
 
         public CPU(String _coreCount, String _threadCount, String _coreClock, String _TDP, String _integratedGraphics, String _integratedCooler, String _Socket)
         {

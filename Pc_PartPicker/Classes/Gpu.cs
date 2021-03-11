@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pc_PartPicker.Classes
+namespace Pc_PartPicker
 {
     class Gpu
     {
-        private String chipSet { get; }
-        private String gpuMemory { get; }
-        private int tdp { get; }
+        public String chipSet { get; }
+        public String gpuMemory { get; }
+        public int tdp { get; }
 
 
         public Gpu(String chipSet, String gpuMemory, String tdp)

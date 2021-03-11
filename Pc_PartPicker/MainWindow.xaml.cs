@@ -13,7 +13,18 @@ using System.Runtime.InteropServices;
 using System.Windows.Interop;
 
 namespace Pc_PartPicker
-{ 
+{
+    static class Constants
+    {
+        public const int CPUCONST = 1;
+        public const int CPUCOOLERCONST = 2;
+        public const int GPUCONST = 6;
+        public const int CASECONST = 7;
+        public const int MEMORYCONST = 4;
+        public const int MOTHERBOARDCONST = 3;
+        public const int PSUCONST = 8;
+        public const int STORAGECONST = 5;
+    }
     public partial class MainWindow : Window
     {
         private const int GWL_STYLE = -16;

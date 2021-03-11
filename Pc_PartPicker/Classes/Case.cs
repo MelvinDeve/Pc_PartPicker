@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pc_PartPicker.Classes
+namespace Pc_PartPicker
 {
     class Case
     {
-        private String formFactor { get; }
+        public String formFactor { get; }
 
         public Case(String formFactor)
         {
