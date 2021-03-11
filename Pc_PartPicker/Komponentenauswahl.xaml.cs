@@ -98,7 +98,7 @@ namespace Pc_PartPicker
         private void btn_CPU_Cooler_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
-            Build build = new Build(Constants.GPUCONST);
+            Build build = new Build(Constants.CPUCOOLERCONST);
             build.ShowDialog();
             this.Show();
         }
