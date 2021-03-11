@@ -94,7 +94,7 @@ namespace Pc_PartPicker
             if (configuration.motherboard != null)
             {
                 this.Hide();
-                Build build = new Build(Constants.MEMORYCONST);
+                Build build = new Build(Constants.STORAGECONST);
                 build.ShowDialog();
                 this.Show();
             }

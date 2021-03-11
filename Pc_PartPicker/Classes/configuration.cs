@@ -18,5 +18,7 @@ namespace Pc_PartPicker
         public static Motherboard motherboard { get; set; }
         public static Psu psu { get; set; }
         public static List<Storage> storage { get; set; } = new List<Storage>();
+
+
     }
 }
