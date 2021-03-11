@@ -12,13 +12,13 @@
         <Label x:Name="lbl_ppp" Content="PCPARTPICKER" HorizontalAlignment="Center" Foreground="White" FontSize="50" Width="338" Margin="231,240,231,193"/>
         <Label x:Name="lbl_slogan" Content="BUILD YOUR DREAM" HorizontalAlignment="Left" Margin="258,296,0,154" FontSize="30" Foreground="#FFEB2A53"/>
         <Line Stroke="#FF171520" X1="0" Y1="380" X2="800" Y2="380" StrokeThickness="4"/>
-        <Button x:Name="btn_exit" Margin="0,382,400,41" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btn_exit_Click">
+        <Button x:Name="btn_exit" Margin="0,382,400,41" BorderBrush="{x:Null}" Foreground="White" Click="btn_exit_Click" Background="#FF201E2D">
             <StackPanel Width="396">
                 <Image Source="assets/Exit.png" Height="35" />
                 <TextBlock FontSize="30" Height="35"><Run Text="                     "/><Run Text="Exit"/></TextBlock>
             </StackPanel>
         </Button>
-        <Button Margin="400,382,10,41" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click" >
+        <Button Margin="400,382,10,41" Background="#FF201E2D" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click" >
             <StackPanel Width="384">
                 <Image Source="assets/Tools.png" Height="35" />
                 <TextBlock FontSize="30" Height="35" HorizontalAlignment="Right" Width="384"><Run Text="                    "/><Run Text="Build"/></TextBlock>

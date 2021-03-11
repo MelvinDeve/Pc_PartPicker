@@ -68,13 +68,13 @@
         </Button>
 
         <Line Stroke="#FF171520" X1="0" Y1="380" X2="800" Y2="380" StrokeThickness="4"/>
-        <Button x:Name="btn_exit" Margin="0,382,400,41" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btn_exit_Click">
+        <Button x:Name="btn_exit" Margin="0,382,400,41" Background="#FF201E2D" BorderBrush="{x:Null}" Foreground="White" Click="btn_exit_Click">
             <StackPanel Width="393">
                 <Image Source="assets/Exit.png" Height="35" />
                 <TextBlock FontSize="30" Height="35" HorizontalAlignment="Center" Width="393" VerticalAlignment="Center"><Run Text="              "/><Run Text="Main Menu"/></TextBlock>
             </StackPanel>
         </Button>
-        <Button x:Name="btn_ViewBuild" Margin="400,382,10,41" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btn_ViewBuild_Click" >
+        <Button x:Name="btn_ViewBuild" Margin="400,382,10,41" Background="#FF201E2D" BorderBrush="{x:Null}" Foreground="White" Click="btn_ViewBuild_Click" >
             <StackPanel Width="381">
                 <Image Source="assets/view.png" Height="35" />
                 <TextBlock FontSize="30" Height="35"><Run Text="               "/><Run Text="View Build"/></TextBlock>
@@ -82,14 +82,14 @@
         </Button>
         <Line Stroke="#FF171520" X1="400" Y1="380" X2="400" Y2="500" StrokeThickness="4"/>
 
-        <Button x:Name="btn_load" HorizontalAlignment="Left" Height="53" VerticalAlignment="Top" Width="59" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="btn_load_Click">
+        <Button x:Name="btn_load" HorizontalAlignment="Left" Height="53" VerticalAlignment="Top" Width="59" Background="#FF201E2D" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="btn_load_Click">
             <StackPanel>
                 <Image x:Name="Load" Source="assets/load.png" Height="29" Width="37" VerticalAlignment="Top" />
                 <TextBlock Text="Load" FontSize="17" Height="25" Width="36" Foreground="White"/>
             </StackPanel>
         </Button>
 
-        <Button x:Name="btn_save" HorizontalAlignment="Left" Height="53" VerticalAlignment="Top" Width="59" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="731,0,0,0" Click="btn_save_Click">
+        <Button x:Name="btn_save" HorizontalAlignment="Left" Height="53" VerticalAlignment="Top" Width="59" Background="#FF201E2D" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="731,0,0,0" Click="btn_save_Click">
             <StackPanel>
                 <Image x:Name="Save" Source="assets/save.png" Height="29" Width="37" VerticalAlignment="Top" />
                 <TextBlock Text="Save" FontSize="17" Height="25" Width="36" Foreground="White"/>
