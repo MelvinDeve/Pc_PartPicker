@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Pc_PartPicker
 {
@@ -16,10 +18,10 @@ namespace Pc_PartPicker
         public static CPU_Cooler cpuCooler { get; set; }
         public static Gpu gpu { get; set; }
 
-        public static List<Memory> memory { get; set; }
+        public static List<Memory> memory { get; set; } = new List<Memory>();
         public static Motherboard motherboard { get; set; }
         public static Psu psu { get; set; }
-        public static List<Storage> storage { get; set; }
+        public static List<Storage> storage { get; set; } = new List<Storage>();
 
     }
 
@@ -37,6 +39,7 @@ namespace Pc_PartPicker
             psu = configuration.psu;
             storage = configuration.storage;
         }
+        const string FileSavePath = "Partlist.xml";
         Case pcCase { get; set; }
         CPU cpu { get; set; }
         CPU_Cooler cpuCooler { get; set; }
@@ -58,6 +61,32 @@ namespace Pc_PartPicker
             configuration.psu = psu;
             configuration.storage = storage;
             }
+        public void BasicSave()
+        {
+            var xs = new XmlSerializer(typeof(configWrite));
 
+            using (TextWriter sw = new StreamWriter(FileSavePath))
+            {
+                xs.Serialize(sw, this);
+            }
+        }
+        public void BasicLoad()
+        {
+            var xs = new XmlSerializer(typeof(configWrite));
+
+            using (var sr = new StreamReader(FileSavePath))
+            {
+                var tempObject = (configWrite)xs.Deserialize(sr);
+                pcCase = tempObject.pcCase;
+                cpu = tempObject.cpu;
+                cpuCooler = tempObject.cpuCooler;
+                gpu = tempObject.gpu;
+                memory = tempObject.memory;
+                motherboard = tempObject.motherboard;
+                psu = tempObject.psu;
+                storage = tempObject.storage;
+                configRead();
+            }
+        }
     }
 }

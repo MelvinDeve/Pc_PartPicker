@@ -143,5 +143,15 @@ namespace Pc_PartPicker
             view.ShowDialog();
             this.Show();
         }
+
+        private void btn_save_Click(object sender, RoutedEventArgs e)
+        {
+            XMLWrite.WriteXML();
+        }
+
+        private void btn_load_Click(object sender, RoutedEventArgs e)
+        {
+            XMLWrite.ReadXML();
+        }
     }
 }
