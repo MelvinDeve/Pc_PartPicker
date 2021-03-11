@@ -108,12 +108,56 @@ namespace Pc_PartPicker
             this.Show();
         }
 
-        private void btn_Delete_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if (TableItems.SelectedItem != null)
+            {
+                DataRowView selectedRow;
+                selectedRow = (DataRowView)TableItems.SelectedItem;
+                switch (selectedRow.Row.ItemArray[0])
+                {
+                    case "Case":
+                        configuration.pcCase = null;
+                        break;
+                    case "CPU":
+                        configuration.cpu = null;
+                        configuration.psu = null;
+                        break;
+                    case "CPU Cooler":
+                        configuration.cpuCooler = null;
+                        break;
+                    case "GPU":
+                        configuration.gpu = null;
+                        configuration.psu = null;
+                        break;
+                    case "Mainboard":
+                        configuration.motherboard = null;
+                        configuration.memory.Clear();
+                        configuration.storage.Clear();
+                        break;
+                    case "RAM":
+                        configuration.memory.RemoveAt(configuration.memory.Count - 1);
+                        break;
+                    case "Storage":
+                        for(int i = 0; i<configuration.storage.Count; i++)
+                        {
+                            if(configuration.storage[i].name == (string)selectedRow.Row.ItemArray[1])
+                            {
+                                configuration.storage.RemoveAt(i);
+                                break;
+                            }
+                        }
+                        break;
+                    case "Power Supply":
+                        configuration.psu = null;
+                        break;
+                }
+                
+            }
+            this.Hide();
             ViewBuild vb = new ViewBuild();
-            Application.Current.MainWindow = vb;
-            vb.Show();
-            this.Close();
+            vb.ShowDialog();
+            this.Show();
         }
     }
 }
