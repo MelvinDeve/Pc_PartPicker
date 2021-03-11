@@ -23,25 +23,11 @@ namespace Pc_PartPicker
     /// </summary>
     public partial class Build : Window
     {
-        private const int GWL_STYLE = -16;
-        private const int WS_SYSMENU = 0x80000;
-        [System.Runtime.InteropServices.DllImport("user32.dll", SetLastError = true)]
-        private static extern int GetWindowLong(IntPtr hWnd, int nIndex);
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
-        private static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
-
-
-        void ToolWindow_Loaded(object sender, RoutedEventArgs e)
-        {
-            // Code to remove close box from window
-            var hwnd = new System.Windows.Interop.WindowInteropHelper(this).Handle;
-            SetWindowLong(hwnd, GWL_STYLE, GetWindowLong(hwnd, GWL_STYLE) & ~WS_SYSMENU);
-        }
+       
 
         public Build(int component)
         {
             InitializeComponent();
-            Loaded += ToolWindow_Loaded;
             DataTable TabData = new DataTable();
             SQLiteConnection sqlite_conn = Database.CreateConnection();
 
@@ -77,6 +63,10 @@ namespace Pc_PartPicker
             }
                 
         }
+        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
+        {
+            Environment.Exit(0);
+        }
 
         private void btn_overview_Click(object sender, RoutedEventArgs e)
         {
@@ -94,13 +84,14 @@ namespace Pc_PartPicker
             this.Show();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        private void btn_Select_Click(object sender, RoutedEventArgs e)
         {
             if (TableItems.SelectedItem != null)
             {
                 DataRowView selectedRow;
                 selectedRow = (DataRowView)TableItems.SelectedItem;
-                switch(TypeLabel.Content)
+                switch (TypeLabel.Content)
                 {
                     case "Case":
                         configuration.pcCase = new Case(selectedRow.Row.ItemArray[0].ToString(), selectedRow.Row.ItemArray[1].ToString(), double.Parse(selectedRow.Row.ItemArray[2].ToString()));
@@ -135,6 +126,7 @@ namespace Pc_PartPicker
                             double.Parse(selectedRow.Row.ItemArray[3].ToString()));
                         break;
                 }
+
 
 
                 this.Hide();

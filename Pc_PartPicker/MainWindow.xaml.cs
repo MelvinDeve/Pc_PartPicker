@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Data.SQLite;
 using System.Runtime.InteropServices;
 using System.Windows.Interop;
+using System.ComponentModel;
 
 namespace Pc_PartPicker
 {
@@ -25,28 +26,21 @@ namespace Pc_PartPicker
         public const int PSUCONST = 8;
         public const int STORAGECONST = 5;
     }
+
     public partial class MainWindow : Window
     {
-        private const int GWL_STYLE = -16;
-        private const int WS_SYSMENU = 0x80000;
-        [System.Runtime.InteropServices.DllImport("user32.dll", SetLastError = true)]
-        private static extern int GetWindowLong(IntPtr hWnd, int nIndex);
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
-        private static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
-
+        
         public MainWindow()
         {
             InitializeComponent();
-            Loaded += ToolWindow_Loaded;
+            
             SQLiteConnection sqlite_conn;
             sqlite_conn = Database.CreateConnection();
         }
 
-        void ToolWindow_Loaded(object sender, RoutedEventArgs e)
+        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
         {
-            // Code to remove close box from window
-            var hwnd = new System.Windows.Interop.WindowInteropHelper(this).Handle;
-            SetWindowLong(hwnd, GWL_STYLE, GetWindowLong(hwnd, GWL_STYLE) & ~WS_SYSMENU);
+            Environment.Exit(0);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

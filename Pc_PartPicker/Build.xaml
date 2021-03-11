@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Pc_PartPicker"
         mc:Ignorable="d"
         Icon="assets/ppp-logo.png"
-        Title="Parts" Height="500" Width="800" WindowStartupLocation="CenterScreen" Background="#FF201E2D" MinWidth="800" MinHeight="500">
+        Title="Parts" Height="500" Width="800" WindowStartupLocation="CenterScreen" Background="#FF201E2D" MinWidth="800" MinHeight="500" ResizeMode="NoResize" >
     <Grid Background="#FF201E2D" Height="500" Width="800">
         <DataGrid Background="{x:Null}" Name="TableItems" ItemsSource="{Binding}" RowBackground="#FF201E2D" Margin="0,121,0,0" Height="256" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="White" AlternatingRowBackground="#FFEB2A53" RowHeaderWidth="0" HorizontalGridLinesBrush="{x:Null}" VerticalGridLinesBrush="White" IsReadOnly="True">
         <DataGrid.Resources>
@@ -24,17 +24,17 @@
         <Line Stroke="#FF171520" X1="0" Y1="380" X2="800" Y2="380" StrokeThickness="4"/>
         <Button x:Name="btn_menu" Margin="0,382,400,41" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btn_menu_Click">
             <StackPanel Width="384">
-                <Image Source="assets/Exit.png" Height="35" Width="36" />
+                <Image Source="assets/Exit.png" Height="35" Margin="0,0,10,0" />
                 <TextBlock FontSize="30" Height="35"  ><Run Text="              "/><Run Text="Main Menu"/></TextBlock>
             </StackPanel>
         </Button>
         <Button x:Name="btn_overview" Margin="400,382,10,41" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btn_overview_Click">
             <StackPanel Width="382">
-                <Image Source="assets/componentlist.png" Height="35" Width="36" />
+                <Image Source="assets/componentlist.png" Height="35" />
                 <TextBlock FontSize="30" Height="35"><Run Text="                "/><Run Text="Overview"/></TextBlock>
             </StackPanel>
         </Button>
-        <Button  HorizontalAlignment="Left" Height="75" Margin="620,26,0,0" VerticalAlignment="Top" Width="87" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click" >
+        <Button x:Name="btn_Select"  HorizontalAlignment="Left" Height="75" Margin="620,26,0,0" VerticalAlignment="Top" Width="87" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btn_Select_Click"  >
             <StackPanel>
                 <Image Source="assets/check.png" Height="35" Width="36" />
                 <TextBlock Text="Select" FontSize="30" Height="35"/>

@@ -20,17 +20,11 @@ namespace Pc_PartPicker
     /// </summary>
     public partial class ViewBuild : Window
     {
-        private const int GWL_STYLE = -16;
-        private const int WS_SYSMENU = 0x80000;
-        [System.Runtime.InteropServices.DllImport("user32.dll", SetLastError = true)]
-        private static extern int GetWindowLong(IntPtr hWnd, int nIndex);
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
-        private static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
+        
         public ViewBuild()
         {
 
             InitializeComponent();
-            Loaded += ToolWindow_Loaded;
             DataTable TabData = new DataTable();
             TabData.Columns.Add("Part");
             TabData.Columns.Add("Product");
@@ -86,11 +80,9 @@ namespace Pc_PartPicker
             TableItems.DataContext = TabData.DefaultView;
 
         }
-        void ToolWindow_Loaded(object sender, RoutedEventArgs e)
+        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
         {
-            // Code to remove close box from window
-            var hwnd = new System.Windows.Interop.WindowInteropHelper(this).Handle;
-            SetWindowLong(hwnd, GWL_STYLE, GetWindowLong(hwnd, GWL_STYLE) & ~WS_SYSMENU);
+            Environment.Exit(0);
         }
         private void btn_menu_Click(object sender, RoutedEventArgs e)
         {
@@ -108,7 +100,9 @@ namespace Pc_PartPicker
             this.Show();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        
+
+        private void btn_Delete_Click(object sender, RoutedEventArgs e)
         {
             if (TableItems.SelectedItem != null)
             {
@@ -139,9 +133,9 @@ namespace Pc_PartPicker
                         configuration.memory.RemoveAt(configuration.memory.Count - 1);
                         break;
                     case "Storage":
-                        for(int i = 0; i<configuration.storage.Count; i++)
+                        for (int i = 0; i < configuration.storage.Count; i++)
                         {
-                            if(configuration.storage[i].name == (string)selectedRow.Row.ItemArray[1])
+                            if (configuration.storage[i].name == (string)selectedRow.Row.ItemArray[1])
                             {
                                 configuration.storage.RemoveAt(i);
                                 break;
@@ -152,7 +146,7 @@ namespace Pc_PartPicker
                         configuration.psu = null;
                         break;
                 }
-                
+
             }
             this.Hide();
             ViewBuild vb = new ViewBuild();
