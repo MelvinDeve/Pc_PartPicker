@@ -89,9 +89,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\Case.cs" />
     <Compile Include="Classes\CPU.cs" />
     <Compile Include="Classes\CPU_Cooler.cs" />
+    <Compile Include="Classes\Gpu.cs" />
+    <Compile Include="Classes\Memory.cs" />
     <Compile Include="Classes\Motherboard.cs" />
+    <Compile Include="Classes\Psu.cs" />
+    <Compile Include="Classes\Storage.cs" />
     <Compile Include="ViewBuild.xaml.cs">
       <DependentUpon>ViewBuild.xaml</DependentUpon>
     </Compile>
