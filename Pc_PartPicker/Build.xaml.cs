@@ -16,19 +16,29 @@ using System.Windows.Shapes;
 
 namespace Pc_PartPicker
 {
+    public static class testImage2
+    {
+            /*
+            BitmapImage bitmap = new BitmapImage();
+            bitmap.BeginInit();
+            bitmap.UriSource = new Uri(@"C:\\Users\\melvi\\source\\PCPartPicker\\Pc_PartPicker\\images\\CPU_R5_3600.jpg", UriKind.Absolute);
+            bitmap.EndInit();
+            public Image img = new Image();
+            img.Source = bitmap;
+            */
+
+
+    }
     /// <summary>
     /// Interaction logic for Build.xaml
     /// </summary>
     public partial class Build : Window
     {
-        
         public Build()
         {
-            String imgStr = "CPU_R5_3600.jpg";
         InitializeComponent();
             DataTable TabData = new DataTable();
 
-            
 
             BitmapImage bitmap = new BitmapImage();
             bitmap.BeginInit();
@@ -62,13 +72,14 @@ namespace Pc_PartPicker
             //Create FrameworkElementFactory
             var imga = new FrameworkElementFactory(typeof(Image));
             //Create binding
-            Binding binding = new Binding("imgStr");
+            Binding binding = new Binding("img");
 
            
 
             //Set the converter
             //binding.Converter = new ImageSourceConverter();
-            imga.SetBinding(Image.SourceProperty, binding);
+            //imga.SetBinding(Image.SourceProperty, binding);
+            imga.SetValue(Image.SourceProperty, img.Source);
 
             //Create data template
             var template = new DataTemplate();
@@ -93,20 +104,7 @@ namespace Pc_PartPicker
 
         }
 
-        public Image testImage2
-        {
-            get
-            {
-                BitmapImage bitmap = new BitmapImage();
-                bitmap.BeginInit();
-                bitmap.UriSource = new Uri(@"C:\\Users\\melvi\\source\\PCPartPicker\\Pc_PartPicker\\Pc_PartPicker\\images\\CPU_R5_3600.jpg", UriKind.Absolute);
-                bitmap.EndInit();
-                Image img = new Image();
-                img.Source = bitmap;
-
-                return img;
-            }
-        }
+        
 
         
 
