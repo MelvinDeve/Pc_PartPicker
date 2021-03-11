@@ -48,8 +48,8 @@
 
         <Button x:Name="btn_SSD" HorizontalAlignment="Left" Height="83" Margin="413,244,0,0" VerticalAlignment="Top" Width="96" Background="#FFEB2A53" Click="btn_SSD_Click" >
             <StackPanel>
-                <Image x:Name="SSD" Source="assets/SSD.png" Height="56" HorizontalAlignment="Left" Width="53" VerticalAlignment="Top" Margin="15,0,0,0" />
-                <TextBlock Text="Hard Disk" FontSize="17" Height="25" Margin="4,0,-5,0" Width="83"/>
+                <Image x:Name="SSD" Source="assets/SSD.png" Height="56" HorizontalAlignment="Left" Width="64" VerticalAlignment="Top" Margin="15,0,0,0" />
+                <TextBlock Text="Storage" FontSize="17" Height="25" Margin="4,0,-5,0" Width="64" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </StackPanel>
         </Button>
 

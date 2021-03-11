@@ -55,12 +55,22 @@ namespace Pc_PartPicker
             this.Show();
         }
 
+         
         private void btn_RAM_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();
-            Build build = new Build(Constants.MEMORYCONST);
-            build.ShowDialog();
-            this.Show();
+            
+                if (configuration.motherboard != null)
+                {
+                    this.Hide();
+                    Build build = new Build(Constants.MEMORYCONST);
+                    build.ShowDialog();
+                    this.Show();
+                }
+                else
+                  {
+                MessageBox.Show("Please select a Motherboard first.");
+                  }
+          
         }
 
         private void btn_GPU_Click(object sender, RoutedEventArgs e)
@@ -81,18 +91,33 @@ namespace Pc_PartPicker
 
         private void btn_SSD_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();
-            Build build = new Build(Constants.STORAGECONST);
-            build.ShowDialog();
-            this.Show();
+            if (configuration.motherboard != null)
+            {
+                this.Hide();
+                Build build = new Build(Constants.MEMORYCONST);
+                build.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please select a Motherboard first.");
+            }
+
         }
 
         private void btn_PSU_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();
-            Build build = new Build(Constants.PSUCONST);
-            build.ShowDialog();
-            this.Show();
+            if ((configuration.gpu != null) && (configuration.cpu != null))
+            {
+                this.Hide();
+                Build build = new Build(Constants.PSUCONST);
+                build.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please select a CPU and a GPU first.");
+            }
         }
 
         private void btn_CPU_Cooler_Click(object sender, RoutedEventArgs e)
@@ -102,7 +127,7 @@ namespace Pc_PartPicker
             build.ShowDialog();
             this.Show();
         }
-
+      
         private void btn_exit_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
