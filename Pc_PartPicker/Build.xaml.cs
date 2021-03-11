@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -20,19 +21,96 @@ namespace Pc_PartPicker
     /// </summary>
     public partial class Build : Window
     {
+        
         public Build()
         {
-            InitializeComponent();
+            String imgStr = "CPU_R5_3600.jpg";
+        InitializeComponent();
             DataTable TabData = new DataTable();
 
-            TabData.Columns.Add("id");
-            TabData.Columns.Add("image");
+            
+
+            BitmapImage bitmap = new BitmapImage();
+            bitmap.BeginInit();
+            bitmap.UriSource = new Uri(@"C:\\Users\\melvi\\source\\PCPartPicker\\Pc_PartPicker\\Pc_PartPicker\\images\\CPU_R5_3600.jpg", UriKind.Absolute);
+            bitmap.EndInit();
+
+            /*
+            
+            
+            FrameworkElementFactory dgtc = new FrameworkElementFactory(typeof(DataGridTemplateColumn));
+            FrameworkElementFactory dgtcct = new FrameworkElementFactory(typeof(DataGridTemplateColumn.CellTemplate));
+            dgtc.AppendChild(dgtcct);
+            */
+            FrameworkElementFactory image = new FrameworkElementFactory(typeof(Image));
+            image.SetBinding(Image.SourceProperty, new Binding(@"C:\\Users\\melvi\\source\\PCPartPicker\\Pc_PartPicker\\Pc_PartPicker\\images\\CPU_R5_3600.jpg"));
+            DataTemplate dt = new DataTemplate();
+            Image img = new Image();
+            img.Source = bitmap;
+
+            DataColumn col = new DataColumn();
+            col.DataType = typeof(Image);
+
+
+
+
+            var column = new DataGridTemplateColumn();
+            column.CanUserResize = false;
+            column.CanUserReorder = false;
+            column.Header = "";
+
+            //Create FrameworkElementFactory
+            var imga = new FrameworkElementFactory(typeof(Image));
+            //Create binding
+            Binding binding = new Binding("imgStr");
+
+           
+
+            //Set the converter
+            //binding.Converter = new ImageSourceConverter();
+            imga.SetBinding(Image.SourceProperty, binding);
+
+            //Create data template
+            var template = new DataTemplate();
+            template.VisualTree = imga;
+            column.CellTemplate = template;
+
+            TableItems.Columns.Add(column);
+
+
+
+
+
+            TabData.Columns.Add("fdsg");
+            TabData.Columns.Add("image", typeof(DataTemplate));
             TabData.Columns.Add("Name1");
             TabData.Columns.Add("Name2");
-            TabData.Rows.Add(new object[] { 123, "image.png", "Foo", "Bar" });
+            TabData.Rows.Add(new object[] { 123, template, "Foo", "Bar" });
             TableItems.DataContext = TabData.DefaultView;
-                
+            
+
+            
+
         }
+
+        public Image testImage2
+        {
+            get
+            {
+                BitmapImage bitmap = new BitmapImage();
+                bitmap.BeginInit();
+                bitmap.UriSource = new Uri(@"C:\\Users\\melvi\\source\\PCPartPicker\\Pc_PartPicker\\Pc_PartPicker\\images\\CPU_R5_3600.jpg", UriKind.Absolute);
+                bitmap.EndInit();
+                Image img = new Image();
+                img.Source = bitmap;
+
+                return img;
+            }
+        }
+
+        
+
+
 
         private void btn_overview_Click(object sender, RoutedEventArgs e)
         {
