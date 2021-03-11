@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Pc_PartPicker
 {
-    class Psu
+    public class Psu
     {
-        public String name { get; }
-        public String efficiencyRating { get; }
-        public int wattage { get; }
-        public double price { get; }
+        public String name;
+        public String efficiencyRating;
+        public int wattage;
+        public double price;
 
         public Psu(String name, String efficiencyRating, String wattage, double price)
         {
@@ -19,6 +19,10 @@ namespace Pc_PartPicker
             this.efficiencyRating = efficiencyRating;
             this.wattage = Int32.Parse(wattage);
             this.price = price;
+        }
+        public Psu()
+        {
+
         }
     }
 }

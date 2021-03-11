@@ -30,6 +30,10 @@ namespace Pc_PartPicker
 
         public configWrite()
         {
+        }
+
+        public void fill()
+        {
             pcCase = configuration.pcCase;
             cpu = configuration.cpu;
             cpuCooler = configuration.cpuCooler;
@@ -39,16 +43,17 @@ namespace Pc_PartPicker
             psu = configuration.psu;
             storage = configuration.storage;
         }
-        const string FileSavePath = "Partlist.xml";
-        Case pcCase { get; set; }
-        CPU cpu { get; set; }
-        CPU_Cooler cpuCooler { get; set; }
-        Gpu gpu { get; set; }
 
-        List<Memory> memory { get; set; }
-        Motherboard motherboard { get; set; }
-        Psu psu { get; set; }
-        List<Storage> storage { get; set; }
+        const string FileSavePath = "Partlist.xml";
+        public Case pcCase;
+        public CPU cpu;
+        public CPU_Cooler cpuCooler;
+        public Gpu gpu;
+
+        public List<Memory> memory;
+        public Motherboard motherboard;
+        public Psu psu;
+        public List<Storage> storage;
 
         public void configRead()
             {
