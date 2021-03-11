@@ -41,6 +41,6 @@
             </StackPanel>
         </Button>
         <Line Stroke="#FF171520" X1="400" Y1="380" X2="400" Y2="500" StrokeThickness="4"/>
-        <Label Name="TypeLabel" Content="Label" HorizontalAlignment="Left" Margin="71,43,0,0" VerticalAlignment="Top" Height="44" Width="140" FontSize="24" Foreground="White"/>
+        <Label Name="TypeLabel" Content="Label" HorizontalAlignment="Left" Margin="71,43,0,0" VerticalAlignment="Top" Height="44" Width="162" FontSize="24" Foreground="White"/>
     </Grid>
 </Window>

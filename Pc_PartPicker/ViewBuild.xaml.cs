@@ -107,5 +107,13 @@ namespace Pc_PartPicker
             komp.ShowDialog();
             this.Show();
         }
+
+        private void btn_Delete_Click(object sender, RoutedEventArgs e)
+        {
+            ViewBuild vb = new ViewBuild();
+            Application.Current.MainWindow = vb;
+            vb.Show();
+            this.Close();
+        }
     }
 }

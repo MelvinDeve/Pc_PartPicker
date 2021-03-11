@@ -35,12 +35,13 @@
                 <TextBlock Text="Overview" FontSize="30" Height="35"/>
             </StackPanel>
         </Button>
-        <Button  HorizontalAlignment="Left" Height="75" Margin="620,26,0,0" VerticalAlignment="Top" Width="92" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White"  >
+        <Button x:Name="btn_Delete"  HorizontalAlignment="Left" Height="75" Margin="620,26,0,0" VerticalAlignment="Top" Width="92" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btn_Delete_Click"  >
             <StackPanel>
                 <Image Source="assets/delete.png" Height="35" Width="36" />
                 <TextBlock Text="Delete" FontSize="30" Height="35"/>
             </StackPanel>
         </Button>
         <Line Stroke="#FF171520" X1="400" Y1="380" X2="400" Y2="500" StrokeThickness="4"/>
+        <Label x:Name="Label1" Content="Label" HorizontalAlignment="Left" Height="40" Margin="55,40,0,0" VerticalAlignment="Top" Width="179" Foreground="White"/>
     </Grid>
 </Window>
