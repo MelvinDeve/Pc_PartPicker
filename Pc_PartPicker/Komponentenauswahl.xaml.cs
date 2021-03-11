@@ -215,5 +215,15 @@ namespace Pc_PartPicker
             else { btn_PSU.Background = Brushes.Green; }
 
         }
+
+        private void btn_load_Click(object sender, RoutedEventArgs e)
+        {
+            XMLWrite.ReadXML();
+        }
+
+        private void btn_save_Click(object sender, RoutedEventArgs e)
+        {
+            XMLWrite.WriteXML();
+        }
     }
 }
