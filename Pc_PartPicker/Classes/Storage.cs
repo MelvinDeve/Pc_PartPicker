@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Pc_PartPicker
 {
-    class Storage
+    public class Storage
     {
-        public String name { get; }
-        public String capacity { get; }
-        public String intface { get; }
-        public double price { get; }
+        public String name;
+        public String capacity;
+        public String intface;
+        public double price;
 
         public Storage(String name,  String capacity, String intface, double price)
         {
@@ -19,6 +19,10 @@ namespace Pc_PartPicker
             this.capacity = capacity;
             this.intface = intface;
             this.price = price;
+        }
+        public Storage()
+        {
+
         }
     }
 }

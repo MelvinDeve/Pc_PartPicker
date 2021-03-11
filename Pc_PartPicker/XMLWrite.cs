@@ -12,6 +12,7 @@ namespace Pc_PartPicker
         public static void WriteXML()
         {
             configWrite conWrite = new configWrite();
+            conWrite.fill();
             conWrite.BasicSave();
             /*
             configWrite conWrite = new configWrite();
