@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Pc_PartPicker"
         mc:Ignorable="d"
         Icon="assets/ppp-logo.png"
-        Title="ComponentView" Height="500" Width="800" WindowStartupLocation="CenterScreen" Background="#FF201E2D" MinWidth="800" MinHeight="500">
+        Title="ComponentView" Height="500" Width="800" WindowStartupLocation="CenterScreen" Background="#FF201E2D" MinWidth="800" MinHeight="500" ResizeMode="NoResize">
     <Grid Background="#FF201E2D" Height="500" Width="800" >
         <Image x:Name="img_ppp" Height="100" Width="130"  HorizontalAlignment="Center" Source="assets/ppp-logo.png" Margin="335,16,335,384"/>
         <Button Grid.Column="0" x:Name="btn_case"  Width="96" Height="83" Margin="173,132,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Background="#FFEB2A53" Click="btn_case_Click">
@@ -70,13 +70,13 @@
         <Line Stroke="#FF171520" X1="0" Y1="380" X2="800" Y2="380" StrokeThickness="4"/>
         <Button x:Name="btn_exit" Margin="0,382,400,41" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btn_exit_Click">
             <StackPanel Width="393">
-                <Image Source="assets/Exit.png" Height="35" Width="36" />
-                <TextBlock FontSize="30" Height="35" ><Run Text="               "/><Run Text="Main Menu"/></TextBlock>
+                <Image Source="assets/Exit.png" Height="35" />
+                <TextBlock FontSize="30" Height="35" HorizontalAlignment="Center" Width="393" VerticalAlignment="Center"><Run Text="              "/><Run Text="Main Menu"/></TextBlock>
             </StackPanel>
         </Button>
-        <Button Margin="400,382,10,41" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click">
+        <Button x:Name="btn_ViewBuild" Margin="400,382,10,41" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btn_ViewBuild_Click" >
             <StackPanel Width="381">
-                <Image Source="assets/view.png" Height="35" Width="36" />
+                <Image Source="assets/view.png" Height="35" />
                 <TextBlock FontSize="30" Height="35"><Run Text="               "/><Run Text="View Build"/></TextBlock>
             </StackPanel>
         </Button>
