@@ -95,8 +95,8 @@
     <Compile Include="Classes\Gpu.cs" />
     <Compile Include="Classes\Memory.cs" />
     <Compile Include="Classes\Motherboard.cs" />
-    <Compile Include="Classes\Psu.cs" />
     <Compile Include="Classes\Storage.cs" />
+    <Compile Include="Classes\Psu.cs" />
     <Compile Include="ViewBuild.xaml.cs">
       <DependentUpon>ViewBuild.xaml</DependentUpon>
     </Compile>
@@ -152,7 +152,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="assets\select" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -208,16 +207,7 @@
     <Resource Include="images\CPU_R5_3600.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="assets\select1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="assets\select2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="assets\select3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="assets\select4.jpg" />
+    <Resource Include="assets\check.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
