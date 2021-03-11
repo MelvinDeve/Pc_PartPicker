@@ -70,7 +70,14 @@ namespace Pc_PartPicker
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            this.Hide();
+            Komponentenauswahl komp = new Komponentenauswahl();
+            komp.ShowDialog();
+            this.Show();
 
+            
+            
+        
         }
     }
 }
