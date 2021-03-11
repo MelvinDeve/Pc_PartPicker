@@ -72,7 +72,7 @@ namespace Pc_PartPicker
                 }
                 else
                   {
-                MessageBox.Show("Please select a Motherboard first.");
+                MessageBox.Show("Please select a Mainboard first.");
                   }
           
         }
@@ -104,7 +104,7 @@ namespace Pc_PartPicker
             }
             else
             {
-                MessageBox.Show("Please select a Motherboard first.");
+                MessageBox.Show("Please select a Mainboard first.");
             }
 
         }
