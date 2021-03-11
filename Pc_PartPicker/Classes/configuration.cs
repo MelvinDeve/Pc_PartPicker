@@ -14,9 +14,9 @@ namespace Pc_PartPicker
         public static CPU_Cooler cpuCooler { get; set; }
         public static Gpu gpu { get; set; }
 
-        public static List<Memory> memory { get; set; }
+        public static List<Memory> memory { get; set; } = new List<Memory>();
         public static Motherboard motherboard { get; set; }
         public static Psu psu { get; set; }
-        public static List<Storage> storage { get; set; }
+        public static List<Storage> storage { get; set; } = new List<Storage>();
     }
 }
