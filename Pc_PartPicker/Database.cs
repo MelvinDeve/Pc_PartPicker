@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 
 namespace Pc_PartPicker
 {
@@ -78,6 +80,7 @@ namespace Pc_PartPicker
                 TabData.Columns.Add(myreader);
             }
             TabData.Columns.Add("Price");
+
             TabData.Columns.Add("Image", typeof(DataTemplate));
 
             SQLiteDataReader sqlite_datareader_products;
@@ -106,7 +109,18 @@ namespace Pc_PartPicker
                     }
                 }
                 row.Add(partPrice);
-                row.Add(partImage);
+
+                BitmapImage bitmap = new BitmapImage();
+                bitmap.BeginInit();
+                bitmap.UriSource = new Uri(@"C:\\Users\\melvi\\source\\PCPartPicker\\Pc_PartPicker\\Pc_PartPicker\\images\\" +partImage + "sad.jpg", UriKind.Absolute);
+                bitmap.EndInit();
+
+                var img = new FrameworkElementFactory(typeof(Image));
+                img.SetValue(Image.SourceProperty, bitmap);
+                var template = new DataTemplate();
+                template.VisualTree = img;
+
+                row.Add(template);
                 if (checkRow(partType, row))
                 {
                     TabData.Rows.Add(row.ToArray());

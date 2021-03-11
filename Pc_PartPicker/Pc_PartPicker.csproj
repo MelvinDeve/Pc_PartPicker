@@ -205,13 +205,81 @@
     <Resource Include="assets\save.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\CPU_R5_3600.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="assets\check.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="assets\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Case_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Case_10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Case_11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Case_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Case_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Case_4.jpg" />
+    <Resource Include="images\Case_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Case_6.jpg" />
+    <Resource Include="images\Case_7.jpg" />
+    <Resource Include="images\Case_8.jpg" />
+    <Resource Include="images\Case_9.jpg" />
+    <Resource Include="images\Cooler_1.jpg" />
+    <Resource Include="images\Cooler_10.jpg" />
+    <Resource Include="images\Cooler_2.jpg" />
+    <Resource Include="images\Cooler_3.jpg" />
+    <Resource Include="images\Cooler_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Cooler_5.jpg" />
+    <Resource Include="images\Cooler_6.jpg" />
+    <Resource Include="images\Cooler_7.jpg" />
+    <Resource Include="images\Cooler_8.jpg" />
+    <Resource Include="images\Cooler_9.jpg" />
+    <Resource Include="images\CPU_ i5_10600K.jpg" />
+    <Resource Include="images\CPU_ i9_9900KF.jpg" />
+    <Resource Include="images\CPU_5_3400G.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\CPU_5_3600.jpg" />
+    <Resource Include="images\CPU_5_5600X.jpg" />
+    <Resource Include="images\CPU_7_3700X.jpg" />
+    <Resource Include="images\CPU_7_3800x.jpg" />
+    <Resource Include="images\CPU_7_5800X.jpg" />
+    <Resource Include="images\CPU_9_3900X.jpg" />
+    <Resource Include="images\CPU_9_3950X.jpg" />
+    <Resource Include="images\CPU_9_5900X.jpg" />
+    <Resource Include="images\CPU_9_5950X.jpg" />
+    <Resource Include="images\CPU_i5_10400F.jpg" />
+    <Resource Include="images\CPU_i5_10400G1.jpg" />
+    <Resource Include="images\CPU_i7_10700K.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\CPU_i7_9700K.jpg" />
+    <Resource Include="images\CPU_i7_9700KF.jpg" />
+    <Resource Include="images\CPU_i9_10850K.jpg" />
+    <Resource Include="images\CPU_i9_10900K.jpg" />
+    <Resource Include="images\CPU_i9_9900K.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\GPU_1.jpg" />
+    <Resource Include="images\GPU_10.jpg" />
+    <Resource Include="images\GPU_11.jpg" />
+    <Resource Include="images\GPU_12.jpg" />
+    <Resource Include="images\GPU_13.jpg" />
+    <Resource Include="images\GPU_14.jpg" />
+    <Resource Include="images\GPU_15.jpg" />
+    <Resource Include="images\GPU_16.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
