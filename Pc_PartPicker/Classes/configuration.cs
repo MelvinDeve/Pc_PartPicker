@@ -1,14 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Pc_PartPicker
 {
 
     static class configuration
     {
+
+        static configuration() { }
         public static Case pcCase {get; set;}
         public static CPU cpu { get; set; }
         public static CPU_Cooler cpuCooler { get; set; }
@@ -18,5 +22,71 @@ namespace Pc_PartPicker
         public static Motherboard motherboard { get; set; }
         public static Psu psu { get; set; }
         public static List<Storage> storage { get; set; } = new List<Storage>();
+
+    }
+
+    public class configWrite
+    {
+
+        public configWrite()
+        {
+            pcCase = configuration.pcCase;
+            cpu = configuration.cpu;
+            cpuCooler = configuration.cpuCooler;
+            gpu = configuration.gpu;
+            memory = configuration.memory;
+            motherboard = configuration.motherboard;
+            psu = configuration.psu;
+            storage = configuration.storage;
+        }
+        const string FileSavePath = "Partlist.xml";
+        Case pcCase { get; set; }
+        CPU cpu { get; set; }
+        CPU_Cooler cpuCooler { get; set; }
+        Gpu gpu { get; set; }
+
+        List<Memory> memory { get; set; }
+        Motherboard motherboard { get; set; }
+        Psu psu { get; set; }
+        List<Storage> storage { get; set; }
+
+        public void configRead()
+            {
+            configuration.pcCase = pcCase;
+            configuration.cpu = cpu;
+            configuration.cpuCooler = cpuCooler;
+            configuration.gpu = gpu;
+            configuration.memory = memory;
+            configuration.motherboard = motherboard;
+            configuration.psu = psu;
+            configuration.storage = storage;
+            }
+        public void BasicSave()
+        {
+            var xs = new XmlSerializer(typeof(configWrite));
+
+            using (TextWriter sw = new StreamWriter(FileSavePath))
+            {
+                xs.Serialize(sw, this);
+            }
+        }
+        public void BasicLoad()
+        {
+            var xs = new XmlSerializer(typeof(configWrite));
+
+            using (var sr = new StreamReader(FileSavePath))
+            {
+                var tempObject = (configWrite)xs.Deserialize(sr);
+                pcCase = tempObject.pcCase;
+                cpu = tempObject.cpu;
+                cpuCooler = tempObject.cpuCooler;
+                gpu = tempObject.gpu;
+                memory = tempObject.memory;
+                motherboard = tempObject.motherboard;
+                psu = tempObject.psu;
+                storage = tempObject.storage;
+                configRead();
+            }
+        }
     }
 }

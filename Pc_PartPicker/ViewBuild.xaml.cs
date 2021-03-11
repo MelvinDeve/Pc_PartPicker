@@ -32,8 +32,59 @@ namespace Pc_PartPicker
             InitializeComponent();
             Loaded += ToolWindow_Loaded;
             DataTable TabData = new DataTable();
+            TabData.Columns.Add("Part");
             TabData.Columns.Add("Product");
             TabData.Columns.Add("Price");
+
+            if (configuration.pcCase != null)
+            {
+                TabData.Rows.Add(new Object[] { "Case", configuration.pcCase.name, configuration.pcCase.price });
+            }
+            
+
+            if(configuration.cpu != null)
+            {
+                TabData.Rows.Add(new Object[] {"CPU", configuration.cpu.name, configuration.cpu.price });
+            }
+            
+            if (configuration.cpuCooler != null)
+            {
+                TabData.Rows.Add(new Object[] { "CPU Cooler", configuration.cpuCooler.name, configuration.cpuCooler.price });
+            }
+
+            if (configuration.motherboard != null)
+            {
+                TabData.Rows.Add(new Object[] { "Mainboard", configuration.motherboard.name, configuration.motherboard.price });
+            }
+
+            if (configuration.memory != null)
+            {
+                foreach (Memory ram in configuration.memory)
+                {
+                    TabData.Rows.Add(new Object[] { "RAM", ram.name, ram.price });
+                }
+            }
+
+            if (configuration.gpu != null)
+            {
+                TabData.Rows.Add(new Object[] { "GPU", configuration.gpu.name, configuration.gpu.price });
+            }
+
+            if (configuration.storage != null)
+            {
+                foreach (Storage storage in configuration.storage)
+                {
+                    TabData.Rows.Add(new Object[] { "Storage", storage.name, storage.price });
+                }
+            }
+
+            if (configuration.psu != null)
+            {
+                TabData.Rows.Add(new Object[] { "Power Supply", configuration.psu.name, configuration.psu.price });
+            }
+
+            TableItems.DataContext = TabData.DefaultView;
+
         }
         void ToolWindow_Loaded(object sender, RoutedEventArgs e)
         {

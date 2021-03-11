@@ -171,8 +171,12 @@ namespace Pc_PartPicker
                     break;
                 case Constants.MEMORYCONST:
                     int dimms=0;
-                    if (configuration.memory != null)
+                    if (configuration.memory.Count!=0)
                     {
+                        if (configuration.memory[0].name != (string)props[0])
+                        {
+                            return false;
+                        }
                         foreach (Memory mod in configuration.memory)
                         {
                             dimms += mod.modules;
@@ -183,12 +187,13 @@ namespace Pc_PartPicker
                         return false;
                     }
                     
+                    
                     break;
                 case Constants.STORAGECONST:
                     int stnum = 0;
                     if ((string)props[2] == "sata")
                     {
-                        if (configuration.storage != null)
+                        if (configuration.storage.Count != 0)
                         {
                             foreach (Storage stDev in configuration.storage)
                             {
@@ -204,7 +209,7 @@ namespace Pc_PartPicker
                         }
                     }else if ((string)props[2] == "m.2")
                     {
-                        if (configuration.storage != null)
+                        if (configuration.storage.Count != 0)
                         {
                             foreach (Storage stDev in configuration.storage)
                             {
