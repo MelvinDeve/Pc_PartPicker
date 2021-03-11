@@ -8,11 +8,15 @@ namespace Pc_PartPicker
 {
     class Case
     {
+        public String name { get; }
         public String formFactor { get; }
+        public double price { get; }
 
-        public Case(String formFactor)
+        public Case(String name, String formFactor, double price)
         {
+            this.name = name;
             this.formFactor = formFactor;
+            this.price = price;
         }
     }
 }

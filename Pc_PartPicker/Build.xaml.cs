@@ -31,13 +31,6 @@ namespace Pc_PartPicker
         private static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
 
 
-
-
-        public void dostuff()
-        {
-
-        }
-
         void ToolWindow_Loaded(object sender, RoutedEventArgs e)
         {
             // Code to remove close box from window
@@ -54,6 +47,34 @@ namespace Pc_PartPicker
 
             TabData = Database.ReadDataTable(sqlite_conn, component);
             TableItems.DataContext = TabData.DefaultView;
+
+            switch (component)
+            {
+                case Constants.CASECONST:
+                    TypeLabel.Content = "Case";
+                    break;
+                case Constants.CPUCONST:
+                    TypeLabel.Content = "CPU";
+                    break;
+                case Constants.CPUCOOLERCONST:
+                    TypeLabel.Content = "CPU Cooler";
+                    break;
+                case Constants.GPUCONST:
+                    TypeLabel.Content = "GPU";
+                    break;
+                case Constants.MEMORYCONST:
+                    TypeLabel.Content = "Memory";
+                    break;
+                case Constants.MOTHERBOARDCONST:
+                    TypeLabel.Content = "Mainboard";
+                    break;
+                case Constants.PSUCONST:
+                    TypeLabel.Content = "Power Supply";
+                    break;
+                case Constants.STORAGECONST:
+                    TypeLabel.Content = "Storage";
+                    break;
+            }
                 
         }
 
@@ -75,7 +96,25 @@ namespace Pc_PartPicker
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if (TableItems.SelectedItem != null)
+            {
+                DataRowView selectedRow;
+                selectedRow = (DataRowView)TableItems.SelectedItem;
+                switch(TypeLabel.Content)
+                {
+                    case "Case":
+                        configuration.pcCase = new Case(selectedRow.Row.ItemArray[0].ToString(), selectedRow.Row.ItemArray[1].ToString(), double.Parse(selectedRow.Row.ItemArray[2].ToString()));
+                        break;
+                    //case "CPU":
+                    //    configuration.cpu = 
+                }
 
+
+                this.Hide();
+                Komponentenauswahl komp = new Komponentenauswahl();
+                komp.ShowDialog();
+                this.Show();
+            }
         }
     }
 }
