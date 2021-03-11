@@ -167,8 +167,6 @@ namespace Pc_PartPicker
                 btn_CPU.Background = Brushes.Green;
             }
 
-
-
             if (configuration.cpuCooler == null)
             {
              
