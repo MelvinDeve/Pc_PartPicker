@@ -112,11 +112,13 @@ namespace Pc_PartPicker
 
                 BitmapImage bitmap = new BitmapImage();
                 bitmap.BeginInit();
-                bitmap.UriSource = new Uri(@"C:\\Users\\melvi\\source\\PCPartPicker\\Pc_PartPicker\\Pc_PartPicker\\images\\" +partImage + "sad.jpg", UriKind.Absolute);
+                bitmap.UriSource = new Uri(@"C:\\Users\\melvi\\source\\PCPartPicker\\Pc_PartPicker\\Pc_PartPicker\\images\\" +partImage + ".jpg", UriKind.Absolute);
                 bitmap.EndInit();
+                Image imge = new Image();
+                imge.Source = bitmap;
 
                 var img = new FrameworkElementFactory(typeof(Image));
-                img.SetValue(Image.SourceProperty, bitmap);
+                img.SetValue(Image.SourceProperty, imge.Source);
                 var template = new DataTemplate();
                 template.VisualTree = img;
 
