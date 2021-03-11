@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Drawing;
 
 namespace Pc_PartPicker
 {
@@ -25,7 +26,8 @@ namespace Pc_PartPicker
         private static extern int GetWindowLong(IntPtr hWnd, int nIndex);
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
-
+       
+       
         void ToolWindow_Loaded(object sender, RoutedEventArgs e)
         {
             // Code to remove close box from window
@@ -33,56 +35,14 @@ namespace Pc_PartPicker
             SetWindowLong(hwnd, GWL_STYLE, GetWindowLong(hwnd, GWL_STYLE) & ~WS_SYSMENU);
         }
 
-        void color()
-        {
-            if(configuration.pcCase != null)
-            {
-                btn_CPU.Background = Brushes.Green;
-            }
-            else { btn_CPU.Background = Brushes.Red; }
-            if (configuration.cpu != null)
-            {
-                btn_CPU.Background = Brushes.Green;
-            }
-            else { btn_CPU.Background = Brushes.Red; }
-            if (configuration.cpuCooler != null)
-            {
-                btn_CPU.Background = Brushes.Green;
-            }
-            else { btn_CPU.Background = Brushes.Red; }
-            if (configuration.motherboard != null)
-            {
-                btn_CPU.Background = Brushes.Green;
-            }
-            else { btn_CPU.Background = Brushes.Red; }
-            if (configuration.memory != null)
-            {
-                btn_CPU.Background = Brushes.Green;
-            }
-            else { btn_CPU.Background = Brushes.Red; }
-            if (configuration.gpu != null)
-            {
-                btn_CPU.Background = Brushes.Green;
-            }
-            else { btn_CPU.Background = Brushes.Red; }
-            if (configuration.storage != null)
-            {
-                btn_CPU.Background = Brushes.Green;
-            }
-            else { btn_CPU.Background = Brushes.Red; }
-            if (configuration.psu != null)
-            {
-                btn_CPU.Background = Brushes.Green;
-            }
-            else { btn_CPU.Background = Brushes.Red; }
-
-        }
+        
         public Komponentenauswahl()
         {
             InitializeComponent();
             Loaded += ToolWindow_Loaded;
+            colorBtns();
         }
-
+      
         private void btn_case_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
@@ -186,6 +146,51 @@ namespace Pc_PartPicker
             ViewBuild view = new ViewBuild();
             view.ShowDialog();
             this.Show();
+        }
+
+        public void colorBtns()
+        {
+            if (configuration.pcCase == null)
+            {
+                btn_case.Background = Brushes.Red;
+            }
+            else { btn_case.Background = Brushes.Green; }
+            if (configuration.cpu == null)
+            {
+                btn_CPU.Background = Brushes.Red;
+            }
+            else { btn_CPU.Background = Brushes.Green; }
+            if (configuration.cpuCooler == null)
+            {
+                btn_CPU_Cooler.Background = Brushes.Red;
+            }
+            else { btn_CPU_Cooler.Background = Brushes.Green; }
+            if (configuration.motherboard == null)
+            {
+                btn_Mainboard.Background = Brushes.Red;
+            }
+            else { btn_Mainboard.Background = Brushes.Green; }
+            if (configuration.memory.Count == 0)
+            {
+                btn_RAM.Background = Brushes.Red;
+            }
+            else { btn_RAM.Background = Brushes.Green; }
+            if (configuration.gpu == null)
+            {
+                btn_GPU.Background = Brushes.Red;
+            }
+            else { btn_GPU.Background = Brushes.Green; }
+            if (configuration.storage.Count == 0)
+            {
+                btn_SSD.Background = Brushes.Red;
+            }
+            else { btn_CPU.Background = Brushes.Green; }
+            if (configuration.psu == null)
+            {
+                btn_PSU.Background = Brushes.Red;
+            }
+            else { btn_CPU.Background = Brushes.Green; }
+
         }
     }
 }
