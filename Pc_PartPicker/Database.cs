@@ -123,10 +123,10 @@ namespace Pc_PartPicker
                 case Constants.CASECONST:
                     if (configuration.motherboard != null)
                     {
-                        if((String)props[0] == "µATX" && configuration.motherboard.formFactor == "ATX")
+                        if((String)props[1] == "µATX" && configuration.motherboard.formFactor == "ATX")
                         {
                             return false;
-                        }else if((String)props[0] == "Mini-ITX" && configuration.motherboard.formFactor != "Mini-ITX")
+                        }else if((String)props[1] == "Mini-ITX" && configuration.motherboard.formFactor != "Mini-ITX")
                         {
                             return false;
                         }
@@ -139,7 +139,7 @@ namespace Pc_PartPicker
                 case Constants.CPUCONST:
                     if (configuration.motherboard != null)
                     {
-                        if(configuration.motherboard.socket!= (String)props[7])
+                        if(configuration.motherboard.socket!= (String)props[8])
                         {
                             return false;
                         }
@@ -152,18 +152,18 @@ namespace Pc_PartPicker
                 case Constants.MOTHERBOARDCONST:
                     if(configuration.cpu != null)
                     {
-                        if(configuration.cpu.Socket != (string)props[2])
+                        if(configuration.cpu.Socket != (string)props[3])
                         {
                             return false;
                         }
                     }
                     if (configuration.pcCase!= null)
                     {
-                        if (configuration.pcCase.formFactor == "µATX" && (string)props[1] == "ATX")
+                        if (configuration.pcCase.formFactor == "µATX" && (string)props[2] == "ATX")
                         {
                             return false;
                         }
-                        else if (configuration.pcCase.formFactor == "Mini-ITX" && (string)props[1] != "Mini-ITX")
+                        else if (configuration.pcCase.formFactor == "Mini-ITX" && (string)props[2] != "Mini-ITX")
                         {
                             return false;
                         }
@@ -178,7 +178,7 @@ namespace Pc_PartPicker
                             dimms += mod.modules;
                         }
                     }
-                    if (configuration.motherboard.memorySlots < dimms + Int32.Parse((String)props[1]))
+                    if (configuration.motherboard.memorySlots < dimms + Int32.Parse((String)props[2]))
                     {
                         return false;
                     }
@@ -186,7 +186,7 @@ namespace Pc_PartPicker
                     break;
                 case Constants.STORAGECONST:
                     int stnum = 0;
-                    if ((string)props[1] == "sata")
+                    if ((string)props[2] == "sata")
                     {
                         if (configuration.storage != null)
                         {
@@ -202,7 +202,7 @@ namespace Pc_PartPicker
                         {
                             return false;
                         }
-                    }else if ((string)props[1] == "m.2")
+                    }else if ((string)props[2] == "m.2")
                     {
                         if (configuration.storage != null)
                         {
@@ -222,7 +222,7 @@ namespace Pc_PartPicker
                     break;
                 case Constants.PSUCONST:
                     int tdp = configuration.cpu.TDP + configuration.gpu.tdp + 100;
-                    if (tdp > Int32.Parse((String)props[1]))
+                    if (tdp > Int32.Parse((String)props[2]))
                     {
                         return false;
                     }

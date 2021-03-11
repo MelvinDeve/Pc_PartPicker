@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +31,9 @@ namespace Pc_PartPicker
 
             InitializeComponent();
             Loaded += ToolWindow_Loaded;
+            DataTable TabData = new DataTable();
+            TabData.Columns.Add("Product");
+            TabData.Columns.Add("Price");
         }
         void ToolWindow_Loaded(object sender, RoutedEventArgs e)
         {
