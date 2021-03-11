@@ -35,12 +35,13 @@
             </StackPanel>
         </Button>
         <Line Stroke="#FF171520" X1="400" Y1="380" X2="400" Y2="500" StrokeThickness="4"/>
-
-        <Button HorizontalAlignment="Left" Height="74" Margin="500,27,0,0" VerticalAlignment="Top" Width="300" Background="{x:Null}" BorderBrush="{x:Null}">
+        <Button  HorizontalAlignment="Left" Height="75" Margin="620,26,0,0" VerticalAlignment="Top" Width="87" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click">
             <StackPanel>
-                <TextBlock Text="Select" FontSize="30" Height="45" Foreground="White" Width="214"/>
-                <Image Source="assets/select5.png" Height="35" Width="36" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                <Image Source="assets/check.png" Height="35" Width="36" />
+                <TextBlock Text="Select" FontSize="30" Height="35"/>
             </StackPanel>
         </Button>
+
+
     </Grid>
 </Window>

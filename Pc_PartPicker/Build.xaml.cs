@@ -67,5 +67,10 @@ namespace Pc_PartPicker
             main.ShowDialog();
             this.Show();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
