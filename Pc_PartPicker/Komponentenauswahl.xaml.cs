@@ -219,6 +219,10 @@ namespace Pc_PartPicker
         private void btn_load_Click(object sender, RoutedEventArgs e)
         {
             XMLWrite.ReadXML();
+            this.Hide();
+            Komponentenauswahl komp = new Komponentenauswahl();
+            komp.ShowDialog();
+            this.Show();
         }
 
         private void btn_save_Click(object sender, RoutedEventArgs e)
