@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Pc_PartPicker
 {
-    class Motherboard
+    public class Motherboard
     {
-        public String name { get; }
-        public String Chipset { get; }
-        public String formFactor { get; }
-        public String socket { get; }
-        public int memorySlots { get; }
-        public int m2Slots { get; }
-        public int sataPorts { get; }
-        public double price { get; }
+        public String name;
+        public String Chipset;
+        public String formFactor;
+        public String socket;
+        public int memorySlots;
+        public int m2Slots;
+        public int sataPorts;
+        public double price;
 
         public Motherboard(String _name, String _Chipset, String _formFactor, String _socket, String _memorySlots, String _m2Slots, String _sataPorts, double _price)
         {
@@ -27,6 +27,11 @@ namespace Pc_PartPicker
             m2Slots = Int32.Parse(_m2Slots);
             sataPorts = Int32.Parse(_sataPorts);
             price = _price;
+        }
+
+        public Motherboard()
+        {
+
         }
 
     }

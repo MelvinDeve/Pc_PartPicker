@@ -6,13 +6,21 @@ using System.Threading.Tasks;
 
 namespace Pc_PartPicker
 {
-    class Case
+    public class Case
     {
-        public String formFactor { get; }
+        public String name;
+        public String formFactor;
+        public double price;
 
-        public Case(String formFactor)
+        public Case(String name, String formFactor, double price)
         {
+            this.name = name;
             this.formFactor = formFactor;
+            this.price = price;
+        }
+        public Case()
+        {
+
         }
     }
 }

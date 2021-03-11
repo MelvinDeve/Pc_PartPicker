@@ -9,6 +9,17 @@
         Title="ViewBuild" Height="500" Width="800" WindowStartupLocation="CenterScreen" MinWidth="800" MinHeight="500">
     <Grid Background="#FF201E2D" Height="500" Width="800">
 
+        <DataGrid Background="{x:Null}" Name="TableItems" ItemsSource="{Binding}" RowBackground="#FF201E2D" Margin="0,121,0,0" Height="256" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="White" AlternatingRowBackground="#FFEB2A53" RowHeaderWidth="0" HorizontalGridLinesBrush="{x:Null}" VerticalGridLinesBrush="White" IsReadOnly="True">
+            <DataGrid.Resources>
+                <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#FFEB2A53" />
+                    <Setter Property="BorderBrush" Value="White"/>
+                    <Setter Property="BorderThickness" Value="0, 0, 1, 0"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+
         <Image x:Name="img_ppp" Height="100" Width="130"  HorizontalAlignment="Center" Source="assets/ppp-logo.png" Margin="335,16,335,384"/>
 
         <Line Stroke="#FF171520" X1="0" Y1="380" X2="800" Y2="380" StrokeThickness="4"/>
@@ -22,6 +33,12 @@
             <StackPanel>
                 <Image Source="assets/componentlist.png" Height="35" Width="36" />
                 <TextBlock Text="Overview" FontSize="30" Height="35"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Height="75" Margin="620,26,0,0" VerticalAlignment="Top" Width="92" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click">
+            <StackPanel>
+                <Image Source="assets/delete.png" Height="35" Width="36" />
+                <TextBlock Text="Delete" FontSize="30" Height="35"/>
             </StackPanel>
         </Button>
         <Line Stroke="#FF171520" X1="400" Y1="380" X2="400" Y2="500" StrokeThickness="4"/>

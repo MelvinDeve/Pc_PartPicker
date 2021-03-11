@@ -120,7 +120,7 @@
     <Compile Include="Build.xaml.cs">
       <DependentUpon>Build.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
+    <Compile Include="XMLWrite.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="Komponentenauswahl.xaml.cs">
       <DependentUpon>Komponentenauswahl.xaml</DependentUpon>
@@ -209,6 +209,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="assets\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\delete.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

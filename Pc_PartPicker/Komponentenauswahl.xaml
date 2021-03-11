@@ -48,8 +48,8 @@
 
         <Button x:Name="btn_SSD" HorizontalAlignment="Left" Height="83" Margin="413,244,0,0" VerticalAlignment="Top" Width="96" Background="#FFEB2A53" Click="btn_SSD_Click" >
             <StackPanel>
-                <Image x:Name="SSD" Source="assets/SSD.png" Height="56" HorizontalAlignment="Left" Width="53" VerticalAlignment="Top" Margin="15,0,0,0" />
-                <TextBlock Text="Hard Disk" FontSize="17" Height="25" Margin="4,0,-5,0" Width="83"/>
+                <Image x:Name="SSD" Source="assets/SSD.png" Height="56" HorizontalAlignment="Left" Width="64" VerticalAlignment="Top" Margin="15,0,0,0" />
+                <TextBlock Text="Storage" FontSize="17" Height="25" Margin="4,0,-5,0" Width="64" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </StackPanel>
         </Button>
 
@@ -82,14 +82,14 @@
         </Button>
         <Line Stroke="#FF171520" X1="400" Y1="380" X2="400" Y2="500" StrokeThickness="4"/>
 
-        <Button x:Name="btn_load" HorizontalAlignment="Left" Height="53" VerticalAlignment="Top" Width="59" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+        <Button x:Name="btn_load" HorizontalAlignment="Left" Height="53" VerticalAlignment="Top" Width="59" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="btn_load_Click">
             <StackPanel>
                 <Image x:Name="Load" Source="assets/load.png" Height="29" Width="37" VerticalAlignment="Top" />
                 <TextBlock Text="Load" FontSize="17" Height="25" Width="36" Foreground="White"/>
             </StackPanel>
         </Button>
 
-        <Button x:Name="btn_save" HorizontalAlignment="Left" Height="53" VerticalAlignment="Top" Width="59" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="731,0,0,0">
+        <Button x:Name="btn_save" HorizontalAlignment="Left" Height="53" VerticalAlignment="Top" Width="59" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="731,0,0,0" Click="btn_save_Click">
             <StackPanel>
                 <Image x:Name="Save" Source="assets/save.png" Height="29" Width="37" VerticalAlignment="Top" />
                 <TextBlock Text="Save" FontSize="17" Height="25" Width="36" Foreground="White"/>
