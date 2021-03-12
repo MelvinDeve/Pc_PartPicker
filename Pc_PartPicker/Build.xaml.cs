@@ -24,7 +24,6 @@ namespace Pc_PartPicker
     public partial class Build : Window
     {
        
-
         public Build(int component)
         {
             InitializeComponent();
