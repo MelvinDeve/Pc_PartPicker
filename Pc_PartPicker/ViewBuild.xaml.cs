@@ -30,25 +30,31 @@ namespace Pc_PartPicker
             TabData.Columns.Add("Product");
             TabData.Columns.Add("Price");
 
+            int fullPrice = 0;
+
             if (configuration.pcCase != null)
             {
                 TabData.Rows.Add(new Object[] { "Case", configuration.pcCase.name, configuration.pcCase.price });
+                fullPrice = fullPrice + (int)configuration.pcCase.price;
             }
             
 
             if(configuration.cpu != null)
             {
                 TabData.Rows.Add(new Object[] {"CPU", configuration.cpu.name, configuration.cpu.price });
+                fullPrice = fullPrice + (int)configuration.cpu.price;
             }
             
             if (configuration.cpuCooler != null)
             {
                 TabData.Rows.Add(new Object[] { "CPU Cooler", configuration.cpuCooler.name, configuration.cpuCooler.price });
+                fullPrice = fullPrice + (int)configuration.cpuCooler.price;
             }
 
             if (configuration.motherboard != null)
             {
                 TabData.Rows.Add(new Object[] { "Mainboard", configuration.motherboard.name, configuration.motherboard.price });
+                fullPrice = fullPrice + (int)configuration.motherboard.price;
             }
 
             if (configuration.memory != null)
@@ -56,12 +62,14 @@ namespace Pc_PartPicker
                 foreach (Memory ram in configuration.memory)
                 {
                     TabData.Rows.Add(new Object[] { "RAM", ram.name, ram.price });
+                    fullPrice = fullPrice + (int)ram.price;
                 }
             }
 
             if (configuration.gpu != null)
             {
                 TabData.Rows.Add(new Object[] { "GPU", configuration.gpu.name, configuration.gpu.price });
+                fullPrice = fullPrice + (int)configuration.gpu.price;
             }
 
             if (configuration.storage != null)
@@ -69,15 +77,23 @@ namespace Pc_PartPicker
                 foreach (Storage storage in configuration.storage)
                 {
                     TabData.Rows.Add(new Object[] { "Storage", storage.name, storage.price });
+                    fullPrice = fullPrice + (int)storage.price;
                 }
             }
 
             if (configuration.psu != null)
             {
                 TabData.Rows.Add(new Object[] { "Power Supply", configuration.psu.name, configuration.psu.price });
+                fullPrice = fullPrice + (int)configuration.psu.price;
             }
 
-            TableItems.DataContext = TabData.DefaultView;
+            if (configuration.pcCase != null || configuration.cpu != null || configuration.cpuCooler != null || configuration.motherboard != null || configuration.memory != null || configuration.gpu != null || configuration.storage != null || configuration.psu != null)
+            {
+                TabData.Rows.Add(new Object[] { "", "", "" });
+                TabData.Rows.Add(new Object[] { "", "Total Price", fullPrice });
+            }
+
+                TableItems.DataContext = TabData.DefaultView;
 
         }
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
