@@ -212,15 +212,18 @@ namespace Pc_PartPicker
         private void btn_load_Click(object sender, RoutedEventArgs e)
         {
             XMLWrite.ReadXML();
+            MessageBox.Show("Successfully Loaded Build from File");
             this.Hide();
             Komponentenauswahl komp = new Komponentenauswahl();
             komp.ShowDialog();
             this.Show();
+            
         }
 
         private void btn_save_Click(object sender, RoutedEventArgs e)
         {
             XMLWrite.WriteXML();
+            MessageBox.Show("Successfully Saved Build in File");
         }
 
        
