@@ -127,7 +127,7 @@ namespace Pc_PartPicker
                         break;
                 }
 
-
+                
 
                 this.Hide();
                 Komponentenauswahl komp = new Komponentenauswahl();
