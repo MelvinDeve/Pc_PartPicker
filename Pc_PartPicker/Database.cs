@@ -217,7 +217,11 @@ namespace Pc_PartPicker
                     }
                     break;
                 case Constants.PSUCONST:
-                    int tdp = configuration.cpu.TDP + configuration.gpu.tdp + 100;
+                    int tdp = configuration.cpu.TDP  + 100;
+                    if(configuration.gpu != null)
+                    {
+                        tdp += configuration.gpu.tdp;
+                    }
                     if (tdp > Int32.Parse((String)props[2]))
                     {
                         return false;

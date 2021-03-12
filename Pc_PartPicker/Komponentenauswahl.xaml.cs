@@ -104,7 +104,8 @@ namespace Pc_PartPicker
 
         private void btn_PSU_Click(object sender, RoutedEventArgs e)
         {
-            if ((configuration.gpu != null) && (configuration.cpu != null))
+            if ((configuration.gpu != null) && (configuration.cpu != null)
+                ||(configuration.cpu != null && configuration.cpu.integratedGraphics))
             {
                 this.Hide();
                 Build build = new Build(Constants.PSUCONST);
